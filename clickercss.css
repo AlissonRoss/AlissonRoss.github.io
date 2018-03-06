@@ -1,0 +1,21 @@
+body{
+  background-color: #ffb3ff;
+}
+#container {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+main{
+  display: block;
+  font-family: Lucida Console;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: #ffb3ff;
+}
+footer {
+	font-size: .70em;
+	text-align: center;
+	margin-top: 2em;
+}
