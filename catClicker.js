@@ -1,10 +1,12 @@
 function catClicker() {
     var cat = document.getElementById("container").style.display='none';
-    if (cat.style.display === "block") {
+    do  {
         cat.style.display = "block";
 
 
-    } else {
+    } while(cat.style.display === "none")
+
+    else {
         cat.style.display = "none";
     }
 }

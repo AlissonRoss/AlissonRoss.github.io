@@ -13,7 +13,7 @@
         <div id="container">
 
         <div id="catGIF">
-            <center><input type="image" id="cat"style:"image-rendering: pixelated;" width="45px" height="45px" src="cat.gif"></center>
+            <center><input type="image" id="cat"style:"image-rendering: pix=33==elated;" width="45px" height="45px" src="cat.gif"></center>
         </div>
 
       </div>
@@ -28,10 +28,12 @@
 
     }
 
-    #catGIF{-webkit-animation-timing-function: linear}
+    #catGIF{-webkit-animation-timing-function: linear;  -webkit-animation-fill-mode: forwards;}
     @keyframes mymove {
+
       from {top: 0px;}
       to {top: 500px;opacity: 0;}
+
 
 
   }
