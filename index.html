@@ -8,9 +8,15 @@
 </head>
 <body>
   <main>
-    <div id="container">
-    <center><input type="image" src="splash.png" id="button"></center>
-  </div>
+    <script src="catClicker.js"></script>
+        <center><button id="button" onclick="catClicker()">Click Me</button></center>
+        <div id="container">
+
+        <div id="catGIF">
+            <center><input type="image" id="cat"style:"image-rendering: pixelated;" width="45px" height="45px" src="cat.gif"></center>
+        </div>
+
+      </div>
     </main>
 
     <style>
@@ -22,10 +28,12 @@
 
     }
 
-    #div{-webkit-animation-timing-function: linear}
+    #catGIF{-webkit-animation-timing-function: linear}
     @keyframes mymove {
       from {top: 0px;}
-      to {top: 500px;}
+      to {top: 500px;opacity: 0;}
+
+
   }
     </style>
   </body>
