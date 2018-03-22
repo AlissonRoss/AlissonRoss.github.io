@@ -1,11 +1,13 @@
 body{
   background-color: #ffb3ff;
 }
-#catGIF{
-  width: auto;
+
+#catDIV{
+  width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
+
 main{
   display: block;
   font-family: Lucida Console;
@@ -23,4 +25,27 @@ footer {
 	font-size: .80em;
 	text-align: center;
 	margin-top: 2em;
+}
+
+div {
+  width:50px;
+  height: 50px;
+  position: relative;
+  -webkit-animation: mymove 2s;
+
+}
+
+#catGIF {
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 100vh;
+    opacity: 0;
+  }
 }
