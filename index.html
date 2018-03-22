@@ -8,18 +8,19 @@
 </head>
 <body>
   <main>
-    <script src="catClicker.js"></script>
-    
-    <center><button id="button" onclick="catClicker()">Click Me</button></center>
-    <div id="container"></div>
-
-      <div id="catDIV">
-          <center><input type="image" id="catGIF" style="image-rendering: pixelated;" width="45px" height="45px" src="cat.gif"></center>
-      </div>
-    </main>
+    <center>
+      <p id="counter">0</p>
+      <br/>
+      <button id="button" onclick="catClick()">Click Me</button>
+      <br/>
+      <img id="catGIF" style="image-rendering: pixelated;" width="45px" height="45px" src="cat.gif">
+    </center>
+  </main>
     
   <footer>
     &copy; Copyright 2018. Alisson Leiva.<br>
   </footer>
-  </body>
+  
+  <script src="catClicker.js"></script>
+</body>
 </html>

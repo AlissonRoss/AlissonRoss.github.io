@@ -1,12 +1,13 @@
-function catClicker() {
-    var cat = document.getElementById("container").style.display='none';
-    do  {
-        cat.style.display = "block";
+let cat = document.getElementById("catGIF");
+let counter = document.getElementById("counter");
 
+let count = 0;
 
-    } while(cat.style.display === "none")
-
-    else {
-        cat.style.display = "none";
-    }
+function catClick() {
+    cat.style.animation = 'none';
+    cat.offsetHeight; /* trigger reflow */
+    cat.style.animation = null;
+    
+    ++count;
+    counter.innerHTML = count;
 }
