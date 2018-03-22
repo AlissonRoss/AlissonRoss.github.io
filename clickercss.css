@@ -1,5 +1,7 @@
 body{
+  background:repeating-linear-gradient(pink,white 10%);
   background-color: #ffb3ff;
+
   overflow: hidden;
 }
 
