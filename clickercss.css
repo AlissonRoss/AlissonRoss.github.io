@@ -1,5 +1,14 @@
 body{
   background-color: #ffb3ff;
+  overflow: hidden;
+}
+
+#UI {
+  text-align: center;
+}
+
+#counter {
+  margin: 0px;
 }
 
 #catDIV{
@@ -27,11 +36,12 @@ footer {
 	margin-top: 2em;
 }
 
-#catGIF {
-  position: relative;
-  -webkit-animation: mymove 2s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-fill-mode: forwards;
+.catGIF {
+  image-rendering: pixelated;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  -webkit-animation: mymove 4s;
 }
 
 @keyframes mymove {
@@ -39,7 +49,7 @@ footer {
     top: 0px;
   }
   to {
-    top: 100vh;
+    top: 200vh;
     opacity: 0;
   }
 }
