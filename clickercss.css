@@ -7,6 +7,13 @@ body{
   text-align: center;
 }
 
+#shop {
+  padding: 10px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
 #counter {
   margin: 0px;
 }

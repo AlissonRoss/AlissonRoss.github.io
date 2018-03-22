@@ -2,6 +2,7 @@ let main = document.getElementById("main");
 let cat = document.getElementById("catGIF");
 let counter = document.getElementById("counter");
 let increment = document.getElementById("increment");
+let shop = document.getElementById("shop");
 
 let count = 0;
 let catSize = 1;
@@ -26,7 +27,7 @@ function catClick() {
     setTimeout(recycleCat, 1200, newCat);
     
     ++count;
-    counter.innerHTML = count;
+    updateCount();
 }
 
 function recycleCat(cat) {
@@ -34,16 +35,41 @@ function recycleCat(cat) {
   catPool.push(cat);
 }
 
-function buyUpgrade(button) {
-  console.log("buyUpgrade called with " + button);
+function updateCount() {
+  counter.textContent = count;
   
-  switch(button.id) {
-    case "big_cat":
-        count -= 50;
-        catSize *= 1.25;
-        console.log(baseWidth + "x" + baseHeight);
-        increment.style.width = baseWidth * catSize + "px";
-        increment.style.height = baseHeight * catSize + "px";
-        break;
+  /*
+  for (let i = 0; i < shop.childNodes.length; ++i) {
+    let button = shop.childNodes[i];
+    console.log(button);
+    
+    let cost = button.getAttribute("data-cost");
+    
+    console.log(button);
+    
+    if (count >= cost) {
+      button.disabled = false;
+    } else {
+      button.disabled = true;
+    }
   }
+  
+  */
 }
+
+function buyUpgrade(button) {
+    let cost = button.getAttribute("data-cost");
+    if (count < cost)
+      return;
+    
+    count -= cost;
+    updateCount();
+    
+    catSize *= button.getAttribute("data-multiplier");
+    increment.style.width = baseWidth * catSize + "px";
+    increment.style.height = baseHeight * catSize + "px";
+    
+    button.style.display = "none";
+}
+
+updateCount();
