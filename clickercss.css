@@ -11,6 +11,16 @@ body{
   margin: 0px;
 }
 
+#increment {
+  width: 149px;
+  height: 153px;
+  background: url(splash.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  border: none;
+}
+
 #catDIV{
   width: 100%;
 	margin-left: auto;
@@ -43,13 +53,14 @@ footer {
   height: 45px;
   -webkit-animation: mymove 4s;
 }
-
 @keyframes mymove {
-  from {
-    top: 0px;
+  0% {
+    top: -45px;
   }
-  to {
-    top: 200vh;
+  50% {
     opacity: 0;
+  }
+  100% {
+    top: 200vh;
   }
 }

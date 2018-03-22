@@ -1,18 +1,16 @@
 let main = document.getElementById("main");
 let cat = document.getElementById("catGIF");
 let counter = document.getElementById("counter");
+let increment = document.getElementById("increment");
 
 let count = 0;
+let catSize = 1;
+let baseWidth = 149;//Number(increment.style.width);
+let baseHeight = 153;//Number(increment.style.height);
 
 let catPool = [];
 
 function catClick() {
-    /*
-    cat.style.animation = 'none';
-    cat.offsetHeight;
-    cat.style.animation = null;
-    */
-    
     let newCat;
     if (catPool.length !== 0) {
       newCat = catPool.pop();
@@ -34,4 +32,18 @@ function catClick() {
 function recycleCat(cat) {
   main.removeChild(cat);
   catPool.push(cat);
+}
+
+function buyUpgrade(button) {
+  console.log("buyUpgrade called with " + button);
+  
+  switch(button.id) {
+    case "big_cat":
+        count -= 50;
+        catSize *= 1.25;
+        console.log(baseWidth + "x" + baseHeight);
+        increment.style.width = baseWidth * catSize + "px";
+        increment.style.height = baseHeight * catSize + "px";
+        break;
+  }
 }
