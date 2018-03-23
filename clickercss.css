@@ -36,7 +36,7 @@ body{
 
 @keyframes leftRight {
   from {
-    transform: rotateY(-10.0turn);
+    transform: rotateY(-5.0turn);
     margin-left: 0%;
     }
   to {
