@@ -23,7 +23,7 @@ body{
 #increment {
   width: 149px;
   height: 153px;
-  background: url(splash.png);
+  background: url(splash.gif);
   background-size: cover;
   background-repeat: no-repeat;
   image-rendering: pixelated;
