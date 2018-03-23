@@ -24,10 +24,27 @@ body{
   width: 149px;
   height: 153px;
   background: url(splash.gif);
+
   background-size: cover;
   background-repeat: no-repeat;
   image-rendering: pixelated;
   border: none;
+
+  -webkit-animation: 10s linear 0s infinite alternate leftRight;
+
+}
+
+@keyframes leftRight {
+
+  0% {
+    transform: rotateY(-10.0turn);
+    margin-left: 0%;
+    }
+  100% {
+      margin-left: 100%;
+
+    }
+  }
 }
 
 #catDIV{
@@ -55,6 +72,7 @@ footer {
 	margin-top: 2em;
 }
 
+
 .catGIF {
   image-rendering: pixelated;
   position: fixed;
@@ -72,4 +90,5 @@ footer {
   100% {
     top: 200vh;
   }
+
 }
