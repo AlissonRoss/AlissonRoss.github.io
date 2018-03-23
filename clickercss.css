@@ -83,6 +83,7 @@ footer {
 @keyframes mymove {
   0% {
     top: -45px;
+    transform: rotateY(-10.0turn);
   }
   50% {
     opacity: 0;
