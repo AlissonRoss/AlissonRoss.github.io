@@ -14,7 +14,7 @@ let baseCatHeight = 153;//Number(cat.style.height);
 let catPool = [];
 
 function catClick() {
-    spawnCat();
+    /*spawnCat();*/
     addKittens(1);
 }
 
