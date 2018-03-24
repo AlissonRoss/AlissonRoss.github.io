@@ -5,7 +5,7 @@ let shop = document.getElementById("shop");
 
 let kittenSpawnedCount = 0;
 let kittenCount = 0;
-let kittensPerSecond = 1;
+let kittensPerSecond = 0;
 
 let catSize = 1;
 let baseCatWidth = 149;//Number(cat.style.width);
