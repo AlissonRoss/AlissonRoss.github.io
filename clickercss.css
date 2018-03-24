@@ -41,9 +41,8 @@ body{
     }
   to {
     margin-left: 85%;
-    transform: rotateY(180deg);
     }
-  }
+
 }
 
 #catDIV{
