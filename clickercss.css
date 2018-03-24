@@ -30,18 +30,18 @@ body{
   image-rendering: pixelated;
   border: none;
 
-  -webkit-animation: 10s linear 0s infinite alternate leftRight;
+  -webkit-animation: 5s linear 0s infinite alternate leftRight;
+  -webkit-transform: scaleX(-1);
 
 }
 
 @keyframes leftRight {
   from {
-    transform: rotateY(-5.0turn);
     margin-left: 0%;
     }
   to {
-      margin-left: 85%;
-
+    margin-left: 85%;
+    transform: rotateY(180deg);
     }
   }
 }
