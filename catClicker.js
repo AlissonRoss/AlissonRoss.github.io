@@ -43,7 +43,14 @@ function updateShop() {
   let children = shop.childNodes;
   for (let i = 0; i < children.length; ++i) {
     if (children[i].tagName === "BUTTON") {
-      children[i].disabled = (kittenCount < children[i].cost);
+      let shopItem = children[i];
+      
+      //hard coded, don't allow the shop to buy items if you haven't purchased the first one
+      if (catUpgradeLevel === 0 && shopItem.multiplier > 0) {
+        children[i].disabled = true;
+      } else {
+        children[i].disabled = (kittenCount < children[i].cost);
+      }
     }
   }
 }
@@ -55,7 +62,7 @@ function attemptPurchase(event) {
     let multiplier = button.multiplier;
 
     //just in case someone modified the CSS to re-enable a button
-    if (kittenCount < cost)
+    if (kittenCount < cost && (catUpgradeLevel > 0 || (catUpgradeLevel === 0 && multiplier === 0)))
       return;
 
     subKittens(cost);
