@@ -1,12 +1,15 @@
+"use strict";
+
 let main = document.getElementById("main");
-let counter = document.getElementById("counter");
+let kittenDisplay = document.getElementById("kittenDisplay");
+let levelDisplay = document.getElementById("levelDisplay");
 let cat = document.getElementById("mama");
 let shop = document.getElementById("shop");
 
 let kittenSpawnedCount = 0;
 let kittenCount = 0;
 let kittensPerSecond = 0;
-let catUpgradeLevel = 0;
+let catLevel = 0;
 
 let lastUpdate = -1;
 
@@ -41,16 +44,8 @@ function recycleCat(cat) {
 function updateShop() {
   let children = shop.childNodes;
   for (let i = 0; i < children.length; ++i) {
-    if (children[i].tagName === "BUTTON") {
-      let shopItem = children[i];
-      
-      //hard coded, don't allow the shop to buy items if you haven't purchased the first one
-      if (catUpgradeLevel === 0 && shopItem.multiplier > 0) {
-        children[i].disabled = true;
-      } else {
-        children[i].disabled = (kittenCount < children[i].cost);
-      }
-    }
+    let shopItem = children[i];
+    shopItem.disabled = (kittenCount < shopItem.cost) || (shopItem.minLevel && catLevel < shopItem.minLevel);
   }
 }
 
@@ -59,10 +54,6 @@ function attemptPurchase(event) {
   
     let cost = button.cost;
     let multiplier = button.multiplier;
-
-    //just in case someone modified the CSS to re-enable a button
-    if (kittenCount < cost && (catUpgradeLevel > 0 || (catUpgradeLevel === 0 && multiplier === 0)))
-      return;
 
     subKittens(cost);
 
@@ -73,11 +64,21 @@ function attemptPurchase(event) {
       kittensPerSecond *= multiplier;
     }
 
-    ++catUpgradeLevel;
+    ++catLevel;
+    levelDisplay.textContent = `LVL ${catLevel}`;
+    
     button.removeEventListener("click", attemptPurchase);
     shop.removeChild(button);
     
-    cat.style.backgroundImage = `url("cat${catUpgradeLevel}.gif")`;
+    if (button.unlockedItems) {
+      let unlockedItems = button.unlockedItems;
+      for (let i = 0; i < unlockedItems.length; ++i) {
+        let button = createShopButton(unlockedItems[i]);
+        shop.appendChild(button);
+      }
+    }
+    
+    cat.style.backgroundImage = `url("cat${catLevel}.gif")`;
 }
 
 function subKittens(count) {
@@ -100,11 +101,11 @@ function update(timestamp) {
       
       //put any other update logic here that involves lapses in time between frames
   }
-  counter.textContent = `${Math.floor(kittenCount)} kittens`;
+  kittenDisplay.textContent = `${Math.floor(kittenCount)} kittens`;
   updateShop();
   
   lastUpdate = timestamp;
-
+  
   while (kittenSpawnedCount < kittenCount - 1) {
     spawnKitten();
     ++kittenSpawnedCount;
@@ -114,26 +115,39 @@ function update(timestamp) {
   window.requestAnimationFrame(update);
 }
 
-//called only once during initialization
-function populateShop() {
-  let upgrades = [
-    {name: "Auto Feeder", cost: 20, multiplier: 0},
-    {name: "Wet food", cost: 40, multiplier: 2},
-    {name: "Abstinence-only education", cost: 80, multiplier: 16}
-    ];
-  
-  for (let i = 0; i < upgrades.length; ++i) {
-    let upgrade = upgrades[i];
+function createShopButton(upgrade) {
     let button = document.createElement("button");
-    button.innerHTML = `${upgrade.name}<br>${upgrade.cost}`;
     
     button.name = upgrade.name;
     button.cost = upgrade.cost;
-    button.multiplier = upgrade.multiplier = upgrade.multiplier;
+    button.multiplier = upgrade.multiplier;
+    button.minLevel = upgrade.minLevel;
+    button.unlockedItems = upgrade.unlockedItems;
     button.addEventListener('click', attemptPurchase, true);
     
+    button.innerHTML = `${upgrade.name}<br>${upgrade.cost}`;
+    if (button.minLevel) {
+      button.innerHTML += `<br>LVL ${button.minLevel}`
+    }
+    
+    return button;
+}
+
+//called only once during initialization
+function populateShop() {
+  let upgrades = [
+    {name: "Auto Feeder", cost: 20, multiplier: 0,
+      unlockedItems: [
+        {name: "Wet food", cost: 30, multiplier: 2},
+        {name: "Enriched food", cost: 50, multiplier: 2},
+        {name: "Abstinence-only education", cost: 10, multiplier: 16, minLevel: 3}
+      ]
+    },
+    ];
+  
+  for (let i = 0; i < upgrades.length; ++i) {
+    let button = createShopButton(upgrades[i]);
     shop.appendChild(button);
-    //shop.appendChild(document.createElement("br"));
   }
 }
 populateShop();

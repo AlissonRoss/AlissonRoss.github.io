@@ -11,14 +11,16 @@ body{
 
 #shop {
   padding: 10px;
-  position: fixed;
-  left: 0px;
-  top: 0px;
 }
 
-#counter {
+#kittenDisplay {
   margin: 0px;
-  text-align: right;
+  float: right;
+}
+
+#levelDisplay {
+  margin: 0px;
+  float: left;
 }
 
 #mama {
