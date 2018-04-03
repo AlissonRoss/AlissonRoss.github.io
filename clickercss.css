@@ -6,8 +6,7 @@ body{
 }
 
 #UI {
-  text-align: center;
-  height: 200px;
+  
 }
 
 #shop {
@@ -19,19 +18,20 @@ body{
 
 #counter {
   margin: 0px;
+  text-align: right;
 }
 
 #mama {
   width: 149px;
   height: 153px;
-  position: absolute;
+  position: relative;
 
   background-size: cover;
   background-repeat: no-repeat;
   image-rendering: pixelated;
   border: none;
   outline: none; /* prevent square outline when tapped */
-  animation: 5s linear infinite leftRight;
+  animation: 10s linear infinite leftRight;
   background: Transparent url("cat0.png");
 }
 
@@ -103,7 +103,7 @@ footer {
   position: fixed;
   width: 45px;
   height: 45px;
-  -webkit-animation: mymove 4s;
+  animation: mymove 4s;
 }
 @keyframes mymove {
   0% {

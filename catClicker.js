@@ -13,11 +13,10 @@ let lastUpdate = -1;
 let catPool = [];
 
 function catClick() {
-    /*spawnCat();*/
     addKittens(1);
 }
 
-function spawnCat() {
+function spawnKitten() {
   let newCat;
   if (catPool.length !== 0) {
     newCat = catPool.pop();
@@ -27,7 +26,7 @@ function spawnCat() {
     newCat.classList.add("catGIF");
   }
 
-  newCat.style.left = (Math.random() * window.innerWidth) + "px";
+  newCat.style.left = (Math.random() * (window.innerWidth - 45)) + "px";
   main.append(newCat);
 
   setTimeout(recycleCat, 1200, newCat);
@@ -75,6 +74,7 @@ function attemptPurchase(event) {
     }
 
     ++catUpgradeLevel;
+    button.removeEventListener("click", attemptPurchase);
     shop.removeChild(button);
     
     cat.style.backgroundImage = `url("cat${catUpgradeLevel}.gif")`;
@@ -87,7 +87,6 @@ function subKittens(count) {
 
 function addKittens(count) {
   kittenCount += count;
-  counter.textContent = Math.floor(kittenCount);
 }
 
 //timestamp is the current time in milliseconds
@@ -101,13 +100,13 @@ function update(timestamp) {
       
       //put any other update logic here that involves lapses in time between frames
   }
-  counter.textContent = Math.floor(kittenCount);
+  counter.textContent = `${Math.floor(kittenCount)} kittens`;
   updateShop();
   
   lastUpdate = timestamp;
 
   while (kittenSpawnedCount < kittenCount - 1) {
-    spawnCat();
+    spawnKitten();
     ++kittenSpawnedCount;
   }
   
@@ -134,7 +133,7 @@ function populateShop() {
     button.addEventListener('click', attemptPurchase, true);
     
     shop.appendChild(button);
-    shop.appendChild(document.createElement("br"));
+    //shop.appendChild(document.createElement("br"));
   }
 }
 populateShop();
