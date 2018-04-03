@@ -71,8 +71,17 @@ function buyUpgrade(button) {
     updateCount();
 
     catSize *= button.getAttribute("data-multiplier");
-    cat.style.width = baseCatWidth * catSize + "px";
-    cat.style.height = baseCatHeight * catSize + "px";
+    //cat.style.width = baseCatWidth * catSize + "px";
+    //cat.style.height = baseCatHeight * catSize + "px";
+    switch(catSize) {
+
+    case 1:
+      cat.style.background= url(splash.gif);
+
+        break;
+    default:
+
+      }
 
     kittensPerSecond++;
 

@@ -23,25 +23,31 @@ body{
 #increment {
   width: 149px;
   height: 153px;
-  background: url(splash.gif);
+  background: url(splash1.gif);
 
   background-size: cover;
   background-repeat: no-repeat;
   image-rendering: pixelated;
   border: none;
-
-  -webkit-animation: 5s linear 0s infinite alternate leftRight;
-  -webkit-transform: scaleX(-1);
-
+  -webkit-animation: 5s linear infinite alternate leftRight;
+  /*transform: scaleX(-1);*/
+  transform: scaleX(-1);
 }
 
 @keyframes leftRight {
-  from {
+  0% {
     margin-left: 0%;
-    }
-  to {
-    margin-left: 85%;
-    }
+
+  }
+  1%{
+
+  }
+  99% {
+
+  }
+  100% {
+    margin-left: 80%;
+  }
 
 }
 
