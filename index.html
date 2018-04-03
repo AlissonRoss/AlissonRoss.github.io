@@ -6,26 +6,15 @@
   <title> Cat Clicker </title>
   <meta charset="utf-8">
 </head>
-<body onload="loadListener()">
+<body>
   <main id="main">
     <div id="UI">
-      
       <p id="counter">0</p>
       <br/>
-
+      <button id="mama" onclick="catClick()"></button>
     </div>
-    <button id="increment" onclick="catClick()"></button>
 
     <div id="shop">
-
-      <button id="big_cat" data-cost="20" data-multiplier="1.25" onclick="buyUpgrade(this)">
-        Buy Big Cat: <br/>
-      </button>
-      <br/>
-      <button id="huge_cat" data-cost="40" data-multiplier="1.5" onclick="buyUpgrade(this)">
-        Buy Huge Cat: <br/>
-      </button>
-
     </div>
   </main>
 

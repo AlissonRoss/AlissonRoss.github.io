@@ -7,6 +7,7 @@ body{
 
 #UI {
   text-align: center;
+  height: 200px;
 }
 
 #shop {
@@ -20,35 +21,55 @@ body{
   margin: 0px;
 }
 
-#increment {
+#mama {
   width: 149px;
   height: 153px;
-  background: url(splash1.gif);
+  position: absolute;
 
   background-size: cover;
   background-repeat: no-repeat;
   image-rendering: pixelated;
   border: none;
-  -webkit-animation: 5s linear infinite alternate leftRight;
-  /*transform: scaleX(-1);*/
-  transform: scaleX(-1);
+  outline: none; /* prevent square outline when tapped */
+  animation: 5s linear infinite leftRight;
+  background: Transparent url("cat0.png");
 }
 
 @keyframes leftRight {
   0% {
-    margin-left: 0%;
-
+    left: calc(50% - 74.5px);
+    transform: scaleX(-1);
   }
-  1%{
-
+  
+  23% {
+    left: calc(100% - 149px);
+    transform: scaleX(-1);
   }
-  99% {
-
+  
+  27% {
+    left: calc(100% - 149px);
+    transform: scaleX(1);
   }
+  
+  50% {
+    left: calc(50% - 74.5px);
+    transform: scaleX(1);
+  }
+  
+  73% {
+    left: 0px;
+    transform: scaleX(1);
+  }
+  
+  77% {
+    left: 0px;
+    transform: scaleX(-1);
+  }
+  
   100% {
-    margin-left: 80%;
+    left: calc(50% - 74.5px);
+    transform: scaleX(-1);
   }
-
 }
 
 #catDIV{

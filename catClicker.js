@@ -1,15 +1,14 @@
 let main = document.getElementById("main");
 let counter = document.getElementById("counter");
-let cat = document.getElementById("increment");
+let cat = document.getElementById("mama");
 let shop = document.getElementById("shop");
 
 let kittenSpawnedCount = 0;
 let kittenCount = 0;
 let kittensPerSecond = 0;
+let catUpgradeLevel = 0;
 
-let catSize = 1;
-let baseCatWidth = 149;//Number(cat.style.width);
-let baseCatHeight = 153;//Number(cat.style.height);
+let lastUpdate = -1;
 
 let catPool = [];
 
@@ -39,66 +38,42 @@ function recycleCat(cat) {
   catPool.push(cat);
 }
 
-function updateCount() {
-  counter.textContent = Math.floor(kittenCount);
-
-  /*
-  for (let i = 0; i < shop.childNodes.length; ++i) {
-    let button = shop.childNodes[i];
-    console.log(button);
-
-    let cost = button.getAttribute("data-cost");
-
-    console.log(button);
-
-    if (kittenCount >= cost) {
-      button.disabled = false;
-    } else {
-      button.disabled = true;
+//only enable the items the user can currently purchase
+function updateShop() {
+  let children = shop.childNodes;
+  for (let i = 0; i < children.length; ++i) {
+    if (children[i].tagName === "BUTTON") {
+      children[i].disabled = (kittenCount < children[i].cost);
     }
   }
-
-  */
 }
 
-function buyUpgrade(button) {
-    let cost = button.getAttribute("data-cost");
+function attemptPurchase(event) {
+    let button = event.currentTarget;
+  
+    let cost = button.cost;
+    let multiplier = button.multiplier;
 
+    //just in case someone modified the CSS to re-enable a button
     if (kittenCount < cost)
       return;
 
-    subtractCats(cost);
-    updateCount();
+    subKittens(cost);
 
-    catSize *= button.getAttribute("data-multiplier");
-    //cat.style.width = baseCatWidth * catSize + "px";
-    //cat.style.height = baseCatHeight * catSize + "px";
-    switch(catSize) {
+    //first upgrade starts off the auto kittens
+    if (multiplier === 0) {
+      kittensPerSecond = Math.max(1, kittensPerSecond);
+    } else {
+      kittensPerSecond *= multiplier;
+    }
 
-    case 1:
-      cat.style.background= url(splash.gif);
-
-        break;
-    default:
-
-      }
-
-    kittensPerSecond++;
-
-    button.style.display = "none";
+    ++catUpgradeLevel;
+    shop.removeChild(button);
+    
+    cat.style.backgroundImage = `url("cat${catUpgradeLevel}.gif")`;
 }
 
-function loadListener() {
-  let buttonIds = ["big_cat", "huge_cat"];
-
-  for (let i = 0; i < buttonIds.length; ++i) {
-    let id = buttonIds[i];
-    let button = document.getElementById(id);
-    button.innerHTML += button.getAttribute("data-cost");
-  }
-}
-
-function subtractCats(count) {
+function subKittens(count) {
   kittenCount -= count;
   kittenSpawnedCount -= count;
 }
@@ -108,12 +83,54 @@ function addKittens(count) {
   counter.textContent = Math.floor(kittenCount);
 }
 
-function update() {
-  addKittens(kittensPerSecond * (30 / 1000));
-
-  for (kittenSpawnedCount; kittenSpawnedCount < kittenCount - 1; ++kittenSpawnedCount) {
-    spawnCat();
+//timestamp is the current time in milliseconds
+function update(timestamp) {
+  //time between last update and this one
+  let delta = timestamp - lastUpdate;
+  
+  //ignore deltas larger than 1 second, it usually means an error happened or the user clicked away
+  if (delta < 1000) {
+      addKittens(kittensPerSecond * delta / 1000);
+      
+      //put any other update logic here that involves lapses in time between frames
   }
+  counter.textContent = Math.floor(kittenCount);
+  updateShop();
+  
+  lastUpdate = timestamp;
+
+  while (kittenSpawnedCount < kittenCount - 1) {
+    spawnCat();
+    ++kittenSpawnedCount;
+  }
+  
+  //request to be rendered again, yes it is an infinite loop, but with a delay!
+  window.requestAnimationFrame(update);
 }
 
-setInterval(update, 30);
+//called only once during initialization
+function populateShop() {
+  let upgrades = [
+    {name: "Auto Feeder", cost: 20, multiplier: 0},
+    {name: "Wet food", cost: 40, multiplier: 2},
+    {name: "Abstinence-only education", cost: 80, multiplier: 16}
+    ];
+  
+  for (let i = 0; i < upgrades.length; ++i) {
+    let upgrade = upgrades[i];
+    let button = document.createElement("button");
+    button.innerHTML = `${upgrade.name}<br>${upgrade.cost}`;
+    
+    button.name = upgrade.name;
+    button.cost = upgrade.cost;
+    button.multiplier = upgrade.multiplier = upgrade.multiplier;
+    button.addEventListener('click', attemptPurchase, true);
+    
+    shop.appendChild(button);
+    shop.appendChild(document.createElement("br"));
+  }
+}
+populateShop();
+
+//kick off the rendering loop
+window.requestAnimationFrame(update);
