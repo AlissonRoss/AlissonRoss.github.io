@@ -1,6 +1,6 @@
 "use strict";
 
-let main = document.getElementById("main");
+let fallingKittenContainer = document.getElementById("main");
 let kittenDisplay = document.getElementById("kittenDisplay");
 let levelDisplay = document.getElementById("levelDisplay");
 let cat = document.getElementById("mama");
@@ -30,13 +30,13 @@ function spawnKitten() {
   }
 
   newCat.style.left = (Math.random() * (window.innerWidth - 45)) + "px";
-  main.append(newCat);
+  fallingKittenContainer.append(newCat);
 
   setTimeout(recycleCat, 1200, newCat);
 }
 
 function recycleCat(cat) {
-  main.removeChild(cat);
+  fallingKittenContainer.removeChild(cat);
   catPool.push(cat);
 }
 
@@ -45,7 +45,8 @@ function updateShop() {
   let children = shop.childNodes;
   for (let i = 0; i < children.length; ++i) {
     let shopItem = children[i];
-    shopItem.disabled = (kittenCount < shopItem.cost) || (shopItem.minLevel && catLevel < shopItem.minLevel);
+    shopItem.style.display = (!shopItem.minLevel || catLevel >= shopItem.minLevel) ? "inline" : "none";
+    shopItem.disabled = kittenCount < shopItem.cost;
   }
 }
 
@@ -126,9 +127,6 @@ function createShopButton(upgrade) {
     button.addEventListener('click', attemptPurchase, true);
 
     button.innerHTML = `${upgrade.name}<br>${upgrade.cost}`;
-    if (button.minLevel) {
-      button.innerHTML += `<br>LVL ${button.minLevel}`
-    }
 
     return button;
 }
@@ -140,9 +138,9 @@ function populateShop() {
       unlockedItems: [
         {name: "Wet food", cost: 30, multiplier: 2},
         {name: "Enriched food", cost: 50, multiplier: 2},
-        {name: "Abstinence-only education", cost: 10, multiplier: 16, minLevel: 3}
       ]
     },
+    {name: "Abstinence-only education", cost: 10, multiplier: 16, minLevel: 3},
     ];
 
   for (let i = 0; i < upgrades.length; ++i) {
