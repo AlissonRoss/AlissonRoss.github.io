@@ -25,7 +25,7 @@ function spawnKitten() {
     newCat = catPool.pop();
   } else {
     newCat = document.createElement("img");
-    newCat.src = "cat.gif";
+    newCat.src = "cat.png";
     newCat.classList.add("catGIF");
   }
 
@@ -51,7 +51,7 @@ function updateShop() {
 
 function attemptPurchase(event) {
     let button = event.currentTarget;
-  
+
     let cost = button.cost;
     let multiplier = button.multiplier;
 
@@ -66,10 +66,10 @@ function attemptPurchase(event) {
 
     ++catLevel;
     levelDisplay.textContent = `LVL ${catLevel}`;
-    
+
     button.removeEventListener("click", attemptPurchase);
     shop.removeChild(button);
-    
+
     if (button.unlockedItems) {
       let unlockedItems = button.unlockedItems;
       for (let i = 0; i < unlockedItems.length; ++i) {
@@ -77,7 +77,7 @@ function attemptPurchase(event) {
         shop.appendChild(button);
       }
     }
-    
+
     cat.style.backgroundImage = `url("cat${catLevel}.gif")`;
 }
 
@@ -94,30 +94,30 @@ function addKittens(count) {
 function update(timestamp) {
   //time between last update and this one
   let delta = timestamp - lastUpdate;
-  
+
   //ignore deltas larger than 1 second, it usually means an error happened or the user clicked away
   if (delta < 1000) {
       addKittens(kittensPerSecond * delta / 1000);
-      
+
       //put any other update logic here that involves lapses in time between frames
   }
   kittenDisplay.textContent = `${Math.floor(kittenCount)} kittens`;
   updateShop();
-  
+
   lastUpdate = timestamp;
-  
+
   while (kittenSpawnedCount < kittenCount - 1) {
     spawnKitten();
     ++kittenSpawnedCount;
   }
-  
+
   //request to be rendered again, yes it is an infinite loop, but with a delay!
   window.requestAnimationFrame(update);
 }
 
 function createShopButton(upgrade) {
     let button = document.createElement("button");
-    
+
     button.name = upgrade.name;
     button.cost = upgrade.cost;
     button.multiplier = upgrade.multiplier;
@@ -144,7 +144,7 @@ function populateShop() {
       ]
     },
     ];
-  
+
   for (let i = 0; i < upgrades.length; ++i) {
     let button = createShopButton(upgrades[i]);
     shop.appendChild(button);
