@@ -2,7 +2,6 @@
 
 let fallingKittenContainer = document.getElementById("main");
 let kittenDisplay = document.getElementById("kittenDisplay");
-let levelDisplay = document.getElementById("levelDisplay");
 let cat = document.getElementById("mama");
 let shop = document.getElementById("shop");
 
@@ -66,7 +65,6 @@ function attemptPurchase(event) {
     }
 
     ++catLevel;
-    levelDisplay.textContent = `LVL ${catLevel}`;
 
     button.removeEventListener("click", attemptPurchase);
     shop.removeChild(button);

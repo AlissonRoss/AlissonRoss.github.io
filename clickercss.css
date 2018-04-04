@@ -16,16 +16,12 @@ main {
   position: relative;
   padding: 10px;
   z-index: 1;
+  text-align: center;
 }
 
 #kittenDisplay {
   margin: 0px;
-  float: right;
-}
-
-#levelDisplay {
-  margin: 0px;
-  float: left;
+  text-align: center;
 }
 
 #mama {
