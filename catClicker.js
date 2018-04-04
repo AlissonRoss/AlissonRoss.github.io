@@ -124,12 +124,12 @@ function createShopButton(upgrade) {
     button.minLevel = upgrade.minLevel;
     button.unlockedItems = upgrade.unlockedItems;
     button.addEventListener('click', attemptPurchase, true);
-    
+
     button.innerHTML = `${upgrade.name}<br>${upgrade.cost}`;
     if (button.minLevel) {
       button.innerHTML += `<br>LVL ${button.minLevel}`
     }
-    
+
     return button;
 }
 

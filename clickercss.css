@@ -6,7 +6,7 @@ body{
 }
 
 #UI {
-  
+
 }
 
 #shop {
@@ -34,7 +34,7 @@ body{
   border: none;
   outline: none; /* prevent square outline when tapped */
   animation: 10s linear infinite leftRight;
-  background: Transparent url("cat0.png");
+  background: Transparent url("cat0.gif");
 }
 
 @keyframes leftRight {
@@ -42,32 +42,32 @@ body{
     left: calc(50% - 74.5px);
     transform: scaleX(-1);
   }
-  
+
   23% {
     left: calc(100% - 149px);
     transform: scaleX(-1);
   }
-  
+
   27% {
     left: calc(100% - 149px);
     transform: scaleX(1);
   }
-  
+
   50% {
     left: calc(50% - 74.5px);
     transform: scaleX(1);
   }
-  
+
   73% {
     left: 0px;
     transform: scaleX(1);
   }
-  
+
   77% {
     left: 0px;
     transform: scaleX(-1);
   }
-  
+
   100% {
     left: calc(50% - 74.5px);
     transform: scaleX(-1);
