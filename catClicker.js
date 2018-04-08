@@ -28,7 +28,7 @@ function spawnKitten(level) {
     newCat.classList.add("catGIF");
   }
 
-  newCat.style.left = (Math.random() * (window.innerWidth - 45)) + "px";
+  newCat.style.left = (Math.random() * window.innerWidth) + "px";
   newCat.src = `kitty${level}.png`;
   fallingKittenContainer.append(newCat);
 
@@ -111,18 +111,17 @@ function update(timestamp) {
 
   lastUpdate = timestamp;
 
-  while (kittenSpawnedCount < kittenCount - 100) {
-    spawnHugeKitten(100);
-    kittenSpawnedCount += 100;
+  while (kittenSpawnedCount < kittenCount - 4) {
+    spawnKitten(2);
+    kittenSpawnedCount += 4;
   }
-  while (kittenSpawnedCount < kittenCount - 10) {
-    spawnBigKitten(10);
-    kittenSpawnedCount += 10;
-  }
-
-  while (kittenSpawnedCount < kittenCount - 1) {
+  while (kittenSpawnedCount < kittenCount - 2) {
     spawnKitten(1);
-    ++kittenSpawnedCount;
+    kittenSpawnedCount += 2;
+  }
+  while (kittenSpawnedCount < kittenCount - 1) {
+    spawnKitten(0);
+    kittenSpawnedCount += 1;
   }
 
   //request to be rendered again, yes it is an infinite loop, but with a delay!
@@ -147,15 +146,15 @@ function createShopButton(upgrade) {
 //called only once during initialization
 function populateShop() {
   let upgrades = [
-    {name: "Auto Feeder", cost: 20, multiplier: 0,
+    {name: "Auto Feeder", cost: 2, multiplier: 0,
       unlockedItems: [
-        {name: "Wet food", cost: 30, multiplier: 2},
-        {name: "Enriched food", cost: 50, multiplier: 2},
+        {name: "Wet food", cost: 3, multiplier: 2},
+        {name: "Enriched food", cost: 5, multiplier: 2},
       ]
     },
-    {name: "Abstinence-only education", cost: 10, multiplier: 16, minLevel: 3,
+    {name: "Abstinence-only education", cost: 1, multiplier: 16, minLevel: 3,
     unlockedItems: [
-      {name: "Nathan's favorite", cost: 1000, multiplier: 1},
+      {name: "Nathan's favorite", cost: 100, multiplier: 3},
     ]
   },
     ];
