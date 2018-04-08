@@ -18,17 +18,18 @@ function catClick() {
     addKittens(1);
 }
 
-function spawnKitten() {
+function spawnKitten(level) {
   let newCat;
   if (catPool.length !== 0) {
     newCat = catPool.pop();
   } else {
     newCat = document.createElement("img");
-    newCat.src = "cat.png";
+
     newCat.classList.add("catGIF");
   }
 
   newCat.style.left = (Math.random() * (window.innerWidth - 45)) + "px";
+  newCat.src = `kitty${level}.png`;
   fallingKittenContainer.append(newCat);
 
   setTimeout(recycleCat, 1200, newCat);
@@ -110,8 +111,17 @@ function update(timestamp) {
 
   lastUpdate = timestamp;
 
+  while (kittenSpawnedCount < kittenCount - 100) {
+    spawnHugeKitten(100);
+    kittenSpawnedCount += 100;
+  }
+  while (kittenSpawnedCount < kittenCount - 10) {
+    spawnBigKitten(10);
+    kittenSpawnedCount += 10;
+  }
+
   while (kittenSpawnedCount < kittenCount - 1) {
-    spawnKitten();
+    spawnKitten(1);
     ++kittenSpawnedCount;
   }
 
