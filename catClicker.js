@@ -110,7 +110,16 @@ function update(timestamp) {
   updateShop();
 
   lastUpdate = timestamp;
+  
+  let deltaKittens = (kittenCount - kittenSpawnedCount)|0;
+  for (let bit = 0; bit < 32; ++bit) {
+    if ( (deltaKittens & (1 << bit))|0 !== 0 ) {
+      spawnKitten(bit);
+    }
+  }
+  kittenSpawnedCount += deltaKittens;
 
+  /*
   while (kittenSpawnedCount < kittenCount - 4) {
     spawnKitten(2);
     kittenSpawnedCount += 4;
@@ -123,6 +132,7 @@ function update(timestamp) {
     spawnKitten(0);
     kittenSpawnedCount += 1;
   }
+  /**/
 
   //request to be rendered again, yes it is an infinite loop, but with a delay!
   window.requestAnimationFrame(update);
