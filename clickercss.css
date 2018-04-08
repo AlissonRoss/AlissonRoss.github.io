@@ -51,22 +51,22 @@ main {
 }
 @keyframes leftRight {
   0% {
-    left: calc(50% - 74.5px);
+    left: calc(50% - 100px);
     transform: scaleX(-1);
   }
 
   23% {
-    left: calc(100% - 149px);
+    left: calc(100% - 200px);
     transform: scaleX(-1);
   }
 
   27% {
-    left: calc(100% - 149px);
+    left: calc(100% - 200px);
     transform: scaleX(1);
   }
 
   50% {
-    left: calc(50% - 74.5px);
+    left: calc(50% - 100px);
     transform: scaleX(1);
   }
 
@@ -81,7 +81,7 @@ main {
   }
 
   100% {
-    left: calc(50% - 74.5px);
+    left: calc(50% - 100px);
     transform: scaleX(-1);
   }
 }
