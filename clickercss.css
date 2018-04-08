@@ -30,9 +30,10 @@ main {
 
 #mama {
   background: Transparent url("cat0.gif");
-
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  width: 200px;
+  height: 150px;
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
@@ -41,19 +42,12 @@ main {
 
 }
 .left-right-animate{
-  width: 149px;
-  height: 153px;
   position: relative;
 
   animation: 10s linear infinite leftRight;
 }
 .centerImg{
-  width: 218px;
-  height: 148px;
-  margin: -20px -50px;
-  position:relative;
-  top:50%;
-  left:50%;
+  text-align: center;
 }
 @keyframes leftRight {
   0% {

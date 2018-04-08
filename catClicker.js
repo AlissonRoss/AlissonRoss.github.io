@@ -78,10 +78,10 @@ function attemptPurchase(event) {
       }
     }
 
-    cat.style.background = `url("cat${catLevel}.gif")`;
+    cat.style.backgroundImage = `url("cat${catLevel}.gif")`;
     if(catLevel===5){
       cat.classList.remove("left-right-animate");
-      cat.classList.add("centerImg");
+      main.classList.add("centerImg");
 
     }
 }
