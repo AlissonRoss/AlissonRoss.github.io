@@ -12,6 +12,10 @@ main {
   background-color: #ffb3ff;
 }
 
+#UI {
+  height: 200px;
+}
+
 #shop {
   position: relative;
   padding: 10px;

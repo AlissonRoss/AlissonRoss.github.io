@@ -164,7 +164,9 @@ function populateShop() {
     },
     {name: "Abstinence-only education", cost: 1, multiplier: 16, minLevel: 3,
     unlockedItems: [
-      {name: "Nathan's favorite", cost: 100, multiplier: 3},
+      {name: "Nathan's favorite", cost: 100, multiplier: 2,
+        unlockedItems: [{name: "Alisson's favorite", cost: 200, multiplier: 2}]
+      },
     ]
   },
     ];
