@@ -25,19 +25,32 @@ main {
 }
 
 #mama {
-  width: 149px;
-  height: 153px;
-  position: relative;
+  background: Transparent url("cat0.gif");
 
   background-size: cover;
   background-repeat: no-repeat;
   image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
   border: none;
   outline: none; /* prevent square outline when tapped */
-  animation: 10s linear infinite leftRight;
-  background: Transparent url("cat0.gif");
-}
 
+}
+.left-right-animate{
+  width: 149px;
+  height: 153px;
+  position: relative;
+
+  animation: 10s linear infinite leftRight;
+}
+.centerImg{
+  width: 218px;
+  height: 148px;
+  margin: -20px -50px;
+  position:relative;
+  top:50%;
+  left:50%;
+}
 @keyframes leftRight {
   0% {
     left: calc(50% - 74.5px);
@@ -94,6 +107,8 @@ footer {
 
 .catGIF {
   image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
   position: fixed;
   width: 45px;
   height: 45px;

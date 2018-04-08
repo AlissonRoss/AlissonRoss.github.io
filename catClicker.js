@@ -77,7 +77,12 @@ function attemptPurchase(event) {
       }
     }
 
-    cat.style.backgroundImage = `url("cat${catLevel}.gif")`;
+    cat.style.background = `url("cat${catLevel}.gif")`;
+    if(catLevel===5){
+      cat.classList.remove("left-right-animate");
+      cat.classList.add("centerImg");
+
+    }
 }
 
 function subKittens(count) {
@@ -138,7 +143,11 @@ function populateShop() {
         {name: "Enriched food", cost: 50, multiplier: 2},
       ]
     },
-    {name: "Abstinence-only education", cost: 10, multiplier: 16, minLevel: 3},
+    {name: "Abstinence-only education", cost: 10, multiplier: 16, minLevel: 3,
+    unlockedItems: [
+      {name: "Nathan's favorite", cost: 1000, multiplier: 1},
+    ]
+  },
     ];
 
   for (let i = 0; i < upgrades.length; ++i) {
