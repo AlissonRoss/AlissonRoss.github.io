@@ -51,39 +51,39 @@ function updateShop() {
 }
 
 function attemptPurchase(event) {
-    let button = event.currentTarget;
+  let button = event.currentTarget;
 
-    let cost = button.cost;
-    let multiplier = button.multiplier;
+  let cost = button.cost;
+  let multiplier = button.multiplier;
 
-    subKittens(cost);
+  subKittens(cost);
 
-    //first upgrade starts off the auto kittens
-    if (multiplier === 0) {
-      kittensPerSecond = Math.max(1, kittensPerSecond);
-    } else {
-      kittensPerSecond *= multiplier;
+  //first upgrade starts off the auto kittens
+  if (multiplier === 0) {
+    kittensPerSecond = Math.max(1, kittensPerSecond);
+  } else {
+    kittensPerSecond *= multiplier;
+  }
+
+  ++catLevel;
+
+  button.removeEventListener("click", attemptPurchase);
+  shop.removeChild(button);
+
+  if (button.unlockedItems) {
+    let unlockedItems = button.unlockedItems;
+    for (let i = 0; i < unlockedItems.length; ++i) {
+      let button = createShopButton(unlockedItems[i]);
+      shop.appendChild(button);
     }
+  }
 
-    ++catLevel;
+  cat.style.backgroundImage = `url("cat${catLevel}.gif")`;
+  if(catLevel===5){
+    cat.classList.remove("left-right-animate");
+    main.classList.add("centerImg");
 
-    button.removeEventListener("click", attemptPurchase);
-    shop.removeChild(button);
-
-    if (button.unlockedItems) {
-      let unlockedItems = button.unlockedItems;
-      for (let i = 0; i < unlockedItems.length; ++i) {
-        let button = createShopButton(unlockedItems[i]);
-        shop.appendChild(button);
-      }
-    }
-
-    cat.style.backgroundImage = `url("cat${catLevel}.gif")`;
-    if(catLevel===5){
-      cat.classList.remove("left-right-animate");
-      main.classList.add("centerImg");
-
-    }
+  }
 }
 
 function subKittens(count) {
@@ -119,38 +119,23 @@ function update(timestamp) {
   }
   kittenSpawnedCount += deltaKittens;
 
-  /*
-  while (kittenSpawnedCount < kittenCount - 4) {
-    spawnKitten(2);
-    kittenSpawnedCount += 4;
-  }
-  while (kittenSpawnedCount < kittenCount - 2) {
-    spawnKitten(1);
-    kittenSpawnedCount += 2;
-  }
-  while (kittenSpawnedCount < kittenCount - 1) {
-    spawnKitten(0);
-    kittenSpawnedCount += 1;
-  }
-  /**/
-
   //request to be rendered again, yes it is an infinite loop, but with a delay!
   window.requestAnimationFrame(update);
 }
 
 function createShopButton(upgrade) {
-    let button = document.createElement("button");
+  let button = document.createElement("button");
 
-    button.name = upgrade.name;
-    button.cost = upgrade.cost;
-    button.multiplier = upgrade.multiplier;
-    button.minLevel = upgrade.minLevel;
-    button.unlockedItems = upgrade.unlockedItems;
-    button.addEventListener('click', attemptPurchase, true);
+  button.name = upgrade.name;
+  button.cost = upgrade.cost;
+  button.multiplier = upgrade.multiplier;
+  button.minLevel = upgrade.minLevel;
+  button.unlockedItems = upgrade.unlockedItems;
+  button.addEventListener('click', attemptPurchase, true);
 
-    button.innerHTML = `${upgrade.name}<br>${upgrade.cost}`;
+  button.innerHTML = `${upgrade.name}<br>${upgrade.cost}`;
 
-    return button;
+  return button;
 }
 
 //called only once during initialization
@@ -168,8 +153,8 @@ function populateShop() {
         unlockedItems: [{name: "Alisson's favorite", cost: 200, multiplier: 2}]
       },
     ]
-  },
-    ];
+    },
+  ];
 
   for (let i = 0; i < upgrades.length; ++i) {
     let button = createShopButton(upgrades[i]);
