@@ -10,3 +10,12 @@ body{
     border-radius: 1em;
     background-color: #ffb3ff;
   }
+  footer {
+    position: fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+      font-size: .80em;
+      text-align: center;
+      margin-top: 2em;
+  }
