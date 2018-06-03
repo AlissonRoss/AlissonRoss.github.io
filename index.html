@@ -5,16 +5,36 @@
         <title> Alisson Leiva Salazar </title>
     </head>
     <body>
-        <main id="main">  
-            <p class="a">Finder File Edit</p> 
+        <header>
+            <!--Dropdown menu selection-->
+                <!-- <span>Finder</span>
+                <span>File</span>              
+                <span>Edit</span>-->
+            <!-- Button for dropdown --> 
+            <div class="buttons">
+                <button id="dropdownFinder" onclick="dropdown()">Finder</button>
+                <button id="dropdownFile" onclick="dropdown()">File</button>
+                <button id="dropdownEdit" onclick="dropdown()">Edit</button>
+            </div>  
+            <!--Elements within the dropdown menu item--> 
+            <div id="dropdownContents" class="dropdownStyling">  
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>  
+            </div>                  
+        </header>
+
+        <main>  
             <img class="background" src="pink.png" alt="Alisson" width="300" height="300">    
+
+            <img class="circle" src="photo.jpg" alt="image" width="300" height="300">
+            <p class="username-text">Alisson Leiva Salazar</p>
         </main>
-        
-        <img class="circle" src="photo.jpg" alt="Pineapple" width="300" height="300">
-        <p class="b">Alisson Leiva Salazar</p>
 
         <footer>
             &copy; Copyright 2018. Alisson Leiva Salazar.<br>
         </footer>
+        <!- initializes .js script ->
+        <script src="alisson.js"></script>
     </body>
 </html>
