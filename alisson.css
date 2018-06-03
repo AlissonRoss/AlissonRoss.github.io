@@ -1,23 +1,23 @@
-body{
+body {
     overflow: hidden;
-    background:linear-gradient(pink,white 10%);
-    
+    background:linear-gradient(pink,white 10%);    
 }
-p.a { 
-  word-spacing: 30px;
-  font-size: 10pt;
-}
-p.b{
-  text-align: center;
-}
+/* css drop down- hover listening - hover event- pop up immediately when hovering 
+plus operator- CSS Selector - selects the following element 
+*/
 
-main {
-  display: block;
-  line-height: 1px;
+header {
   margin-top: 0.5em;
   padding: 0.5em;
-  border-radius: 1em;
+  border-radius: 1em; 
   background-color:#eaeaea;
+}
+header span {
+  padding: 0.5em;
+}
+
+p.username-text {
+  text-align: center;
 }
 
 img.background {
@@ -45,4 +45,25 @@ footer {
     font-size: .80em;
     text-align: center;
     margin-top: 2em;
+}
+
+/* Dropdown menu styling*/ 
+.buttons button{ 
+  cursor: pointer;
+  padding:0.5em;
+  font-size:12px; 
+  border-radius: 5px;
+}
+.buttons button:hover {
+  background-color: #ffb0dc91;
+}
+.dropdownStyling {
+  
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
