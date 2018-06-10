@@ -1,6 +1,7 @@
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext("2d");
 
+
 let lastUpdate = 0;
 var grd = context.createRadialGradient(75, 50, 5, 90, 60, 100);
 grd.addColorStop(0, getRandomColor());
@@ -14,7 +15,8 @@ function resize_canvas() {
 	centerX = canvas.width / 2.0;
 	centerY = canvas.height / 2.0;
 	
-	context.clearRect(10,10,150,80);
+	
+	context.clearRect(100,100,100,100);
 	context.font = "20px Arial";
 	context.fillText("" + canvas.width + "x" + canvas.height,100,100);
 	
@@ -32,7 +34,7 @@ function draw(timestamp) {
 	}
 
 	context.fillStyle = grd;
-	context.fillRect(10,10,150,80); 
+	context.fillRect(100,100,100,100); 
 
 	requestAnimationFrame(draw);
 }
