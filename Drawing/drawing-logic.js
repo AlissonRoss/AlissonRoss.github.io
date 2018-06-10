@@ -7,12 +7,14 @@ grd.addColorStop(0, getRandomColor());
 grd.addColorStop(1, getRandomColor()); 
 
 function resize_canvas() {	
+	//Changes resolution of the canvas
+	//makes sure that you are rendering at the full size and resolution of your screen (within the browser window)
 	canvas.width = window.innerWidth * window.devicePixelRatio;
 	canvas.height = window.innerHeight * window.devicePixelRatio;
 	centerX = canvas.width / 2.0;
 	centerY = canvas.height / 2.0;
 	
-	context.clearRect(0, 0, canvas.width, canvas.height);
+	context.clearRect(10,10,150,80);
 	context.font = "20px Arial";
 	context.fillText("" + canvas.width + "x" + canvas.height,100,100);
 	
@@ -26,11 +28,11 @@ function draw(timestamp) {
 		grd.addColorStop(0, getRandomColor());
 		grd.addColorStop(1, getRandomColor());
 
-		lastUpdate += 1000;
+		lastUpdate = timestamp;
 	}
 
 	context.fillStyle = grd;
-	context.fillRect(0, 0, canvas.width, canvas.height); 
+	context.fillRect(10,10,150,80); 
 
 	requestAnimationFrame(draw);
 }
