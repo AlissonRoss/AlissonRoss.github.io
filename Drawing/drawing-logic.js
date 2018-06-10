@@ -1,51 +1,38 @@
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext("2d");
-let callInterval = 16;
 
-var theta = 0.0;
-var centerX, centerY;
-var time = 0.0;
-
-var objects = [];
+let lastUpdate = 0;
+var grd = context.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, getRandomColor());
+grd.addColorStop(1, getRandomColor()); 
 
 function resize_canvas() {	
-	context.canvas.width = window.innerWidth;
-	context.canvas.height = window.innerHeight;
+	canvas.width = window.innerWidth * window.devicePixelRatio;
+	canvas.height = window.innerHeight * window.devicePixelRatio;
 	centerX = canvas.width / 2.0;
 	centerY = canvas.height / 2.0;
 	
 	context.clearRect(0, 0, canvas.width, canvas.height);
-	context.font = "30px Arial";
+	context.font = "20px Arial";
 	context.fillText("" + canvas.width + "x" + canvas.height,100,100);
 	
 	context.lineWidth = canvas.width / 100.0;
-	
-	generateObjects();
 }
+resize_canvas();
 
-function draw() {
-	//clear canvas
-	//context.beginPath();
-	//context.clearRect(0, 0, canvas.width, canvas.height);
-	
-	for (var i = 0; i < objects.length; ++i) {
-		var ball = objects[i];
-		ball.x += ball.vx;
-		ball.y += ball.vy;
-		
-		let radius2 = (ball.x - centerX) ** 2 + (ball.y - centerY) ** 2;
-		ball.vx -= (ball.x - centerX) / radius2;
-		ball.vy -= (ball.y - centerY) / radius2;
-		
-		context.beginPath();
-		context.moveTo(ball.px, ball.py);
-		context.lineTo(ball.x, ball.y);
-		context.strokeStyle = ball.color;
-		context.stroke();
-		
-		ball.px = ball.x;
-		ball.py = ball.y;
+function draw(timestamp) {
+	if (timestamp - lastUpdate > 1000) {
+		grd = context.createRadialGradient(75, 50, 5, 90, 60, 100);
+		grd.addColorStop(0, getRandomColor());
+		grd.addColorStop(1, getRandomColor());
+
+		lastUpdate += 1000;
 	}
+
+	context.fillStyle = grd;
+	context.fillRect(0, 0, canvas.width, canvas.height); 
+
+	requestAnimationFrame(draw);
 }
 
 function getRandomColor() {
@@ -57,24 +44,4 @@ function getRandomColor() {
 	return color;
 }
 
-function generateObjects() {
-	objects = [];
-	
-	for (var i = 0; i < 200; ++i) {
-		var ball = new Object();
-		ball.x = Math.random() * canvas.width;
-		ball.y = Math.random() * canvas.height;
-		
-		let radius = ((ball.x - centerX) ** 2 + (ball.y - centerY) ** 2) ** 0.55;
-		
-		ball.px = ball.x;
-		ball.py = ball.y;
-		ball.vx = (ball.y - centerY) / radius;
-		ball.vy = -(ball.x - centerX) / radius;
-		ball.color = getRandomColor();
-		objects.push(ball);
-	}
-}
-
-resize_canvas();
-setInterval(draw, callInterval);
+requestAnimationFrame(draw);
