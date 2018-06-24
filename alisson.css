@@ -10,7 +10,7 @@ header {
   margin-top: 0.5em;
   /*padding: 0.5em;*/
   /*border-radius: 1em;*/
-  background-color:#eaeaea;
+  background-color:#f1f1f1;
 }
 header span {
   padding: 0.5em;
@@ -53,6 +53,7 @@ footer {
   cursor: pointer;
   padding: 0.5em;
   font-size:12px;
+  border:0;
   /*border-radius: 5px; */
 }
 .buttons button:hover {
