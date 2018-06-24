@@ -8,8 +8,8 @@ plus operator- CSS Selector - selects the following element
 
 header {
   margin-top: 0.5em;
-  padding: 0.5em;
-  border-radius: 1em; 
+  /*padding: 0.5em;*/
+  /*border-radius: 1em;*/
   background-color:#eaeaea;
 }
 header span {
@@ -51,7 +51,7 @@ footer {
 /* Dropdown menu styling*/ 
 .buttons button{ 
   cursor: pointer;
-  /*padding:0.5em;*/
+  padding: 0.5em;
   font-size:12px;
   /*border-radius: 5px; */
 }
