@@ -51,9 +51,9 @@ footer {
 /* Dropdown menu styling*/ 
 .buttons button{ 
   cursor: pointer;
-  padding:0.5em;
-  font-size:12px; 
-  border-radius: 5px;
+  /*padding:0.5em;*/
+  font-size:12px;
+  /*border-radius: 5px; */
 }
 .buttons button:hover {
   background-color: #ffb0dc91;
