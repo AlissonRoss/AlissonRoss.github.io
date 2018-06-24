@@ -9,11 +9,14 @@ plus operator- CSS Selector - selects the following element
 header {
   margin-top: 0.5em;
   /*padding: 0.5em;*/
+  border-radius: 25px;
   /*border-radius: 1em;*/
   background-color:#f1f1f1;
+  padding-left: 25px;
 }
-header span {
+header span { 
   padding: 0.5em;
+ 
 }
 
 p.username-text {
@@ -53,8 +56,7 @@ footer {
   cursor: pointer;
   padding: 1em;
   font-size:12px;
-  border:0;
-  /*border-radius: 5px; */
+  border:0px;
 }
 .buttons button:hover {
   background-color: #ffb0dc91;
