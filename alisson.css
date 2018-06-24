@@ -31,6 +31,7 @@ img.background {
   filter: blur(35px);
 }
 img.circle {
+  padding-top: 2em;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
