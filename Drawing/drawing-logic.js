@@ -16,7 +16,7 @@ function resize_canvas() {
 	centerY = canvas.height / 2.0;
 	
 	
-	context.clearRect(100,100,100,100);
+	context.clearRect(0,0,100,100);
 	context.font = "20px Arial";
 	context.fillText("" + canvas.width + "x" + canvas.height,100,100);
 	
