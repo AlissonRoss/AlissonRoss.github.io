@@ -43,28 +43,37 @@ footer {
   padding-left: 25px;
   font-size:12px;
 }
-#menu > button { 
+#menu > div {
+  position: relative;
+  display: inline-block;
+}
+#menu > div > button {
+  width: 100%;
   margin-right: 1.5em;
   cursor: pointer;
   padding: 1em;
-  border:0px;  
+  border: 0px;
+  box-sizing: border-box;
 }
-#menu > button:hover {
+#menu > div > button:hover {
   background-color: #ffb0dc91;
 }
-#menu > div {
+#menu > div > div {
+  width: 100%;
+  position: absolute;
   display: none;
 }
-#menu > div.visible {
-  position: absolute;
+#menu > div > div.visible {
   display: inline-block;
   margin-top: 40px;
   background-color: #f1f1f1;
   padding:.5em;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  box-sizing: border-box;
 }
-#menu > div > a {
+#menu > div > div > a {
   font-family: sans-serif;
   text-decoration: none;
+  white-space: pre;
 }
