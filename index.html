@@ -7,24 +7,26 @@
     <body>
         <header>
             <!--Dropdown menu selection-->
-                <!-- <span>Finder</span>
-                <span>File</span>              
-                <span>Edit</span>-->
-            <!-- Button for dropdown --> 
-            <div class="buttons">
-                <button id="dropdownFinder" onclick="dropdown()">Finder</button><!--
-                --><button id="dropdownFile" onclick="dropdown()">File</button><!--
-                --><button id="dropdownEdit" onclick="dropdown()">Edit</button>
-            </div>                           
+            <div id="menu">
+                <div class="dropdown">
+                    <a href="#about">About Me</a>
+                </div>
+                <button id="finder">Finder</button>
+
+                <div class="dropdown">
+                    <a href="#projects">Projects</a>
+                </div>
+                <button id="file">File</button>
+
+                <div class="dropdown">
+                    <a href="#contact">Contact</a>  
+                </div>
+                <button id="edit">Edit</button>
+            </div>
         </header>
 
-        <main>  
-            <!--Elements within the dropdown menu item--> 
-            <div id="dropdownContents" class="dropdownStyling">  
-                <a href="#about">About Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>  
-            </div>   
+        <main>
+            </div>  
             <img class="background" src="pink.png" alt="Alisson" width="300" height="300">    
 
             <img class="circle" src="photo.jpg" alt="image" width="300" height="300">
@@ -34,7 +36,7 @@
         <footer>
             &copy; Copyright 2018. Alisson Leiva Salazar.<br>
         </footer>
-        <!- initializes .js script ->
+        <!-- initializes .js script -->
         <script src="alisson.js"></script>
     </body>
 </html>
