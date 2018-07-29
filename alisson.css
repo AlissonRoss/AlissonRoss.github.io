@@ -44,6 +44,7 @@ footer {
   font-size:12px;
 }
 #menu > button { 
+  margin-right: 1.5em;
   cursor: pointer;
   padding: 1em;
   border:0px;  
