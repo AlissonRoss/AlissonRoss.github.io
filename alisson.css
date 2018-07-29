@@ -53,6 +53,11 @@ footer {
 }
 #menu > div {
   display: none;
+}
+#menu > div.visible {
+  position: absolute;
+  display: inline-block;
+  margin-top: 40px;
   background-color: #f1f1f1;
   padding:.5em;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -61,9 +66,4 @@ footer {
 #menu > div > a {
   font-family: sans-serif;
   text-decoration: none;
-}
-#menu > div.visible {
-  position: absolute;
-  display: inline-block;
-  margin-top: 40px;
 }
