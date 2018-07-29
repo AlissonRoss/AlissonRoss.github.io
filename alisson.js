@@ -26,8 +26,8 @@ window.addEventListener("click", function(event) {
 
 /* enable this code if you want to close the gaps between the menu items */
 //remove blank nodes created from the whitespace in the HTML
-// for (const child of menu.childNodes) {
-//     if (child.nodeName === "#text") {
-//         menu.removeChild(child);
-//     }
-// }
+//for (const child of menu.childNodes) {
+    //if (child.nodeName === "#text") {
+       // menu.removeChild(child);
+   // }
+//}
