@@ -9,21 +9,21 @@
             <!--Dropdown menu selection-->
             <div id="menu">
                 <div>
-                    <button class="dropdown-button" onclick="this.focus()">Finder</button>
+                    <button class="dropdown-button">Finder</button>
                     <div class="dropdown">
                         <a href="#about">About Meeeeeeeeeee</a>
                     </div>
                 </div>
 
                 <div>
-                    <button class="dropdown-button" onclick="this.focus()">File</button>
+                    <button class="dropdown-button">File</button>
                     <div class="dropdown">
                         <a href="/CatClicker">Cat Clicker</a>
                     </div>
                 </div>
 
                 <div>
-                    <button class="dropdown-button" onclick="this.focus()">Edit</button>
+                    <button class="dropdown-button">Edit</button>
                     <div class="dropdown">
                         <a href="#contact">Contact</a>  
                     </div>
@@ -31,7 +31,7 @@
             </div>
         </header>
 
-        <main ontouchstart="document.activeElement.blur()">
+        <main>
             </div>  
             <img class="background" src="pink.png" alt="Alisson" width="300" height="300">    
 
@@ -42,5 +42,19 @@
         <footer>
             &copy; Copyright 2018. Alisson Leiva Salazar.<br>
         </footer>
+
+        <script>
+            for (const button of document.querySelectorAll(".dropdown-button")) {
+                button.ontouchstart = function(event) {
+                    this.focus();
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+            }
+
+            document.body.ontouchstart = function(event) {
+                document.activeElement.blur();
+            }
+        </script>
     </body>
 </html>
