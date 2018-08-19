@@ -61,7 +61,7 @@ footer {
 .dropdown-button:hover {
   background-color: #ffb0dc91;
 }
-#menu > div > div {
+.dropdown {
   width: 100%;
   position: relative;
   display: inline-block;
@@ -72,7 +72,10 @@ footer {
   box-sizing: border-box;
   visibility: hidden;
 }
-#menu > div > div.visible {
+.dropdown-button:hover + .dropdown,
+.dropdown-button:focus + .dropdown,
+.dropdown:hover,
+.dropdown:focus {
   visibility: visible;
 }
 #menu > div > div > a {
