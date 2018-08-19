@@ -1,6 +1,6 @@
 body {
   overflow: hidden;
-  background:linear-gradient(pink,white 10%);    
+  background:linear-gradient(pink,white 10%);
 }
 
 p.username-text {
@@ -72,9 +72,7 @@ footer {
   box-sizing: border-box;
   visibility: hidden;
 }
-.dropdown-button:hover + .dropdown,
 .dropdown-button:focus + .dropdown,
-.dropdown:hover,
 .dropdown:focus {
   visibility: visible;
 }
