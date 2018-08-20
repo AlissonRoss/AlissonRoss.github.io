@@ -81,3 +81,19 @@ footer {
   text-decoration: none;
   white-space: pre;
 }
+
+/*Style displays the mobile class */
+.mobile {
+  display: inline;
+}
+.desktop {
+  display: none;
+}
+@media only screen and (min-width: 481px){
+  .mobile {
+		display: none;
+	}
+	.desktop {
+		display: inline;
+	}
+}
