@@ -1,6 +1,6 @@
 body {
   overflow: hidden;
-  background:linear-gradient(pink,white 10%);    
+  background:linear-gradient(pink,white 10%);
 }
 
 p.username-text {
@@ -56,11 +56,12 @@ footer {
   padding: 1em;
   border: 0px;
   box-sizing: border-box;
+  background-color: transparent;
 }
 .dropdown-button:hover {
   background-color: #ffb0dc91;
 }
-#menu > div > div {
+.dropdown {
   width: 100%;
   position: relative;
   display: inline-block;
@@ -71,7 +72,8 @@ footer {
   box-sizing: border-box;
   visibility: hidden;
 }
-#menu > div > div.visible {
+.dropdown-button:focus + .dropdown,
+.dropdown:focus {
   visibility: visible;
 }
 #menu > div > div > a {
@@ -79,3 +81,19 @@ footer {
   text-decoration: none;
   white-space: pre;
 }
+
+/*Style displays the mobile class */
+/* .mobile {
+  display: inline;
+}
+.desktop {
+  display: none;
+}
+@media only screen and (min-width: 481px){
+  .mobile {
+		display: none;
+	}
+	.desktop {
+		display: inline;
+	}
+} */
