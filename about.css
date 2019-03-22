@@ -1,0 +1,29 @@
+header{
+    text-align: left;
+    font-size: 40px;
+}
+main{
+    
+    /**text-align: center;**/
+}
+img.circle {
+    padding-top: 1em;
+    border-radius: 50%;
+    display: grid;
+    margin: -100 100 13 1000;
+    height: auto;
+    max-width: 40%;
+    z-index: -1;
+}
+footer{
+    position: fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    font-size: .80em;
+    text-align: center;
+    margin-top: 2em;
+}
+body{
+    background-color: #AAA39A;
+}
