@@ -1,19 +1,45 @@
 header{
     text-align: left;
     font-size: 40px;
+    color: white;
 }
 main{
-    
-    /**text-align: center;**/
+    font-size: 13.5pt;
+    background-color: #f1f1f1;
+    text-align: left;
+    padding: 60px;
+    border-radius: 10px;
+    height: 20%;
+    display: grid;
+    max-width: 90%;
 }
 img.circle {
-    padding-top: 1em;
-    border-radius: 50%;
-    display: grid;
-    margin: -100 100 13 1000;
+    border-radius: 150%;
+    margin: -50px auto;
+    display: flex;
     height: auto;
-    max-width: 40%;
-    z-index: -1;
+    max-width: 80%;
+}
+#photo1{
+    position: relative;
+    bottom: 0;
+}
+#photo2{
+    z-index: 2;
+    position: relative;
+    bottom:40px;
+    right: 100px;
+}
+#photo3{
+    z-index: 4;
+    position: relative;
+    bottom: 56px;
+    right: 200px;
+
+}
+.desktop{   
+    right: 0%;
+    position: absolute;
 }
 footer{
     position: fixed;
@@ -21,9 +47,11 @@ footer{
     bottom:0;
     width:100%;
     font-size: .80em;
+    position: absolute;
     text-align: center;
     margin-top: 2em;
 }
 body{
-    background-color: #AAA39A;
+    z-index:-1;
+    background-image: linear-gradient(to bottom,rgb(112, 108, 104),#AAA39A, white)
 }
