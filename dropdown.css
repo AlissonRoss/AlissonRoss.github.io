@@ -25,7 +25,8 @@
     background-color: transparent;
 }
 
-.dropdown-button:hover {
+.dropdown-button:hover,
+#menu>div>div>a:hover {
     background-color: #ffb0dc91;
 }
 
@@ -34,7 +35,6 @@
     position: relative;
     display: inline-block;
     background-color: #f1f1f1;
-    padding: .5em;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     box-sizing: border-box;
@@ -49,4 +49,6 @@
     font-family: sans-serif;
     text-decoration: none;
     white-space: pre;
+    display: block;
+    padding: 1em;
 }
