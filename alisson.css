@@ -1,6 +1,6 @@
 body {
   overflow: hidden;
-  background:linear-gradient(pink,white 10%);
+  background: linear-gradient(pink, white 10%);
 }
 
 p.username-text {
@@ -13,10 +13,17 @@ img.background {
   position: absolute;
   left: 0px;
   top: 0px;
-  z-index: -1;
-  -webkit-filter: blur(50px); /* Safari 6.0 - 9.0 */
+  z-index: -3;
+  -webkit-filter: blur(50px);
+  /* Safari 6.0 - 9.0 */
   filter: blur(35px);
 }
+
+img.star {
+  position: absolute;
+  z-index: -2;
+}
+
 img.circle {
   padding-top: 2em;
   border-radius: 50%;
@@ -25,11 +32,12 @@ img.circle {
   height: auto;
   max-width: 60%;
 }
+
 footer {
   position: fixed;
-  left:0;
-  bottom:0;
-  width:100%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   font-size: .80em;
   text-align: center;
   margin-top: 2em;
