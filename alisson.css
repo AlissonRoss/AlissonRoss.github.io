@@ -3,8 +3,32 @@ body {
   background: linear-gradient(pink, white 10%);
 }
 
-p.username-text {
-  text-align: center;
+div.center {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4em;
+  height: auto;
+  max-width: 60%;
+  position: relative;
+  width: 300px;
+  height: 300px;
+
+}
+
+svg.fillframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+img.fillframe {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
 }
 
 img.background {
@@ -25,12 +49,7 @@ img.star {
 }
 
 img.circle {
-  padding-top: 2em;
   border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-  height: auto;
-  max-width: 60%;
 }
 
 footer {
