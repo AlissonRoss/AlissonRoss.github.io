@@ -31,6 +31,25 @@ img.fillframe {
   height: calc(100% - 40px);
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.username-text {
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /*Nathan's solution*/
+  transform-origin: 50% 50%;
+}
+
 img.background {
   width: 100%;
   height: 100%;
