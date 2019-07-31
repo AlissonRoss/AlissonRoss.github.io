@@ -30,16 +30,16 @@ function blinkStarOn(star) {
     star.style.opacity = 1;
 
     //choose a duration between 2 and 3 seconds for a star to twinkle
-    const duration = Math.random() * 2000 + 1000;
+    const duration = Math.random() * 1000 + 1000;
 
     //1 second before the duration ends, start dimming
-    setTimeout(blinkStarOff, duration - 1000, star);
-
-    //after the full duraction, move the star's position and light it up
-    setTimeout(blinkStarOn, duration, star);
+    setTimeout(blinkStarOff, duration, star);
 }
 
 //dim the star
 function blinkStarOff(star) {
     star.style.opacity = 0;
+
+    //after the full duraction, move the star's position and light it up
+    setTimeout(blinkStarOn, 1000, star);
 }

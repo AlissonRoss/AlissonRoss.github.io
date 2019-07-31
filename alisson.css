@@ -58,7 +58,7 @@ img.background {
 img.star {
   position: absolute;
   z-index: -2;
-  transition: opacity 1s;
+  transition: opacity 0.75s;
 }
 
 img.circle {
