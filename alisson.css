@@ -8,8 +8,8 @@ div.center {
   margin: 0 auto;
   margin-top: 4em;
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 330px;
+  height: 330px;
 
 }
 
@@ -23,10 +23,11 @@ svg.fillframe {
 
 img.fillframe {
   position: absolute;
-  left: 20px;
-  top: 20px;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
 }
 
 @keyframes spin {
