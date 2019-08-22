@@ -10,19 +10,22 @@ div.center {
   position: relative;
   width: 330px;
   height: 330px;
-
 }
 
 @keyframes fade {
   0% {
+    opacity: 0;
+  }
+
+  20% {
     opacity: 1;
   }
 
-  25% {
+  33% {
     opacity: 1;
   }
 
-  75% {
+  53% {
     opacity: 0;
   }
 
@@ -31,18 +34,16 @@ div.center {
   }
 }
 
-.circle {
-
-  animation-name: fade;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  margin: auto;
+.fade {
+  animation: 12s fade infinite;
 }
 
-.circle2 {
-  animation-delay: 2s;
+.fade:nth-of-type(2) {
+  animation-delay: -4s;
+}
+
+.fade:nth-of-type(3) {
+  animation-delay: -8s;
 }
 
 
