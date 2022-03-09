@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "react-scripts": "^5.0.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development"
+  }
+}
