@@ -1,18 +1,18 @@
 function populateStar() {
-    let star = document.getElementsByClassName("star")[0];
+    var star = document.getElementsByClassName("star")[0];
     star.style.opacity = 0;
 
-    let desktop = document.getElementsByClassName("desktop")[0];
+    var desktop = document.getElementsByClassName("desktop")[0];
 
     //amount of random of stars
-    let random = Math.floor(Math.random() * 100) + 10;
+    var random = Math.floor(Math.random() * 100) + 10;
 
-    for (let loop = 0; loop < random; loop++) {
+    for (var loop = 0; loop < random; loop++) {
         //populate within the background absolute of class desktop
-        let newStar = star.cloneNode(false);
+        var newStar = star.cloneNode(false);
 
-        newStar.style.left = (Math.random() * window.innerWidth) + "px";
-        newStar.style.top = (Math.random() * window.innerHeight) + "px";
+        newStar.style.left = Math.random() * window.innerWidth + "px";
+        newStar.style.top = Math.random() * window.innerHeight + "px";
         newStar.style.opacity = 0;
         desktop.append(newStar);
 
@@ -25,12 +25,12 @@ populateStar();
 
 //choose a location, choose a duration, and queue evenets
 function blinkStarOn(star) {
-    star.style.left = (Math.random() * window.innerWidth) + "px";
-    star.style.top = (Math.random() * window.innerHeight) + "px";
+    star.style.left = Math.random() * window.innerWidth + "px";
+    star.style.top = Math.random() * window.innerHeight + "px";
     star.style.opacity = 1;
 
     //choose a duration between 2 and 3 seconds for a star to twinkle
-    const duration = Math.random() * 1000 + 1000;
+    var duration = Math.random() * 1000 + 1000;
 
     //1 second before the duration ends, start dimming
     setTimeout(blinkStarOff, duration, star);
