@@ -1,57 +1,64 @@
-header{
+header {
     text-align: left;
     font-size: 40px;
     color: white;
 }
-main{
+
+main {
     font-size: 13.5pt;
     background-color: #f1f1f1;
     text-align: left;
     padding: 60px;
     border-radius: 10px;
-    height: 20%;
     display: grid;
     max-width: 90%;
+    height: 50%;
 }
+
 img.circle {
     border-radius: 150%;
     margin: -50px auto;
     display: flex;
     height: auto;
     max-width: 80%;
-}
-#photo1{
     position: relative;
+}
+
+#photo1 {
     bottom: 0;
 }
-#photo2{
+
+#photo2 {
     z-index: 2;
-    position: relative;
-    bottom:40px;
+    bottom: 40px;
     right: 100px;
 }
-#photo3{
+
+#photo3 {
     z-index: 4;
-    position: relative;
     bottom: 56px;
     right: 200px;
 
 }
-.desktop{   
+
+.desktop {
     right: 0%;
+    top: 20%;
     position: absolute;
 }
-footer{
+
+footer {
     position: fixed;
-    left:0;
-    bottom:0;
-    width:100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     font-size: .80em;
     position: absolute;
     text-align: center;
     margin-top: 2em;
 }
-body{
-    z-index:-1;
-    background-image: linear-gradient(to bottom,rgb(112, 108, 104),#AAA39A, white)
+
+body {
+    z-index: -1;
+    background-image: linear-gradient(to bottom, rgb(112, 108, 104), #AAA39A, white)
 }
