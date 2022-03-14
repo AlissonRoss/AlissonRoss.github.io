@@ -12,14 +12,16 @@ function App() {
         
         <p>
           Hello World from reactjs!
+          
         </p>
+        <p>Site Currently being migrated to ReactJS.</p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/AlissonRoss"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Alisson's Github
         </a>
       </header>
     </div>
