@@ -8,6 +8,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  filter: drop-shadow(3px 5px 2px rgb(102, 88, 98));
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,6 +18,7 @@
 }
 
 .App-header {
+  font-family: fantasy;
   background-color: #917e9b;
   flex-direction:initial;
   align-items: center;
@@ -25,14 +27,14 @@
 }
 
 .Box-main{
-  width: 50vw;
+  width: 45vw;
   height: 25vh;
   border-radius: 10px;
   color: rgb(117, 72, 104);
   font-weight: medium;
   font-size: calc(10px + 1vmin);
-  box-shadow: 3;
-  background-color: #e9f3f3;
+  box-shadow: 0 8px 8px -4px rgb(102, 88, 98);
+  background-color: #ffffff;
   margin-left: auto;
   margin-right: 5vw;
   text-align: right;
