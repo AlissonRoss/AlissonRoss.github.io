@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+  min-height: 100vh;
+  color: white;
+  display: block;
+  background-color: #39373a75;
 }
 
 .App-logo {
@@ -15,13 +18,26 @@
 
 .App-header {
   background-color: #917e9b;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  flex-direction:initial;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.Box-main{
+  width: 50vw;
+  height: 25vh;
+  border-radius: 10px;
+  color: rgb(117, 72, 104);
+  font-weight: medium;
+  font-size: calc(10px + 1vmin);
+  box-shadow: 3;
+  background-color: #e9f3f3;
+  margin-left: auto;
+  margin-right: 5vw;
+  text-align: right;
+  padding-right: 5vw;
+  margin-top:5vh;
 }
 
 .Starcomponent{

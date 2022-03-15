@@ -1,6 +1,6 @@
 //import './index.css';
 export default function populateStars(){
-    populateStar();
+    
     function populateStar(){
     
         var star:HTMLElement = document.getElementsByClassName("App-logo")[0] as HTMLElement;
@@ -26,7 +26,7 @@ export default function populateStars(){
     
         blinkStarOn(star);
     }
-    
+    populateStar();
     //choose a location, choose a duration, and queue evenets
     function blinkStarOn(star: HTMLElement) {
         star.style.left = Math.random() * window.innerWidth + "px";
