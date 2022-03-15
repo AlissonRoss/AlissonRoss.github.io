@@ -21,7 +21,7 @@
   flex-direction:initial;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(50px + 2vmin);
 }
 
 .Box-main{
@@ -37,9 +37,19 @@
   margin-right: 5vw;
   text-align: right;
   padding-right: 5vw;
+  padding-left: 5vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   margin-top:5vh;
 }
-
+.App-footer{
+  text-align: center;
+  background-color: #917e9b;
+  bottom: 0;
+  height: 10vh;
+  position: absolute;
+  width:100%;
+}
 .Starcomponent{
   position: absolute;
   z-index: -2;
@@ -90,7 +100,7 @@ svg.fillframe {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ffffff;
 }
 
 @keyframes App-logo-spin {
