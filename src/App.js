@@ -18,7 +18,7 @@ function App() {
           <p>My name is Alisson Ross.<br/>
             I am a Computer Science and Engineering major at Merced Community College.<br/>
             I am also a Front-end web developer for HackMerced and a IT Assistant for SJDC.<br/>
-            I make website components using ReactJS and other front-end tools.<br/>
+            I make website components using ReactJS, Typescript, and other front-end tools.<br/>
             This site is under current re-construction. <br/>
           </p>
           
