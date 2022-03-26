@@ -1,14 +1,18 @@
+/*IMPORTS*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Red+Hat+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .App {
   min-height: 100vh;
   color: white;
   display: block;
-  background-color: #39373a75;
+  background-color: #ccc4cf;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-  filter: drop-shadow(3px 5px 2px rgb(102, 88, 98));
+  filter: drop-shadow(10px 10px 4px rgb(102, 88, 98));
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -16,23 +20,63 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.NavBar{
+  top:0;
+  float: right;
+  padding-right: 3vw;
+}
+.NavBar a{
+  font-size: calc(1em + 1vmin);
+  color: white;
+  font-weight:bolder;
+  text-decoration: none;
+  font-family: 'Red Hat Text';
+  list-style-type: none;
+  margin: 0;
+  text-align: center;
+  padding: 3vh 3vw;
+}
+.NavBar a:hover {
+  background-color: white;
+  color:rgb(187, 89, 159);
+  box-shadow: 0 8px 8px -4px rgb(102, 88, 98);
+  border-radius: 10px;
+  
+}
+
 
 .App-header {
-  font-family: fantasy;
+  font-family: Caveat;
   background-color: #917e9b;
+  background: linear-gradient(45deg, #9e7baf, #c08ace,#d2b2da ,rgb(250, 195, 250),#f8d9b6);
   flex-direction:initial;
   align-items: center;
   justify-content: center;
-  font-size: calc(4em + 2vmin);
+  font-size: calc(6em + 2vmin);
+  font-weight: bold;
+  animation: gradient 15s ease infinite;
+  animation-direction: alternate;
 }
-
+@keyframes gradient {
+  0% {
+    background-position: 0%
+  }
+  100% {
+    background-position: 100%
+  }
+}
+.Hello-world{
+  font-family: 'Press Start 2P', cursive;
+  padding-bottom: 2vh;
+}
 .Box-main{
   width: 45vw;
   height: 25vh;
+  font-family: 'Red Hat Text', sans-serif;
   border-radius: 10px;
   color: rgb(117, 72, 104);
   font-weight: medium;
-  font-size: calc(0.7em + 1vmin);
+  font-size: calc(.7em + 1.3vmin);
   box-shadow: 0 8px 8px -4px rgb(102, 88, 98);
   background-color: #ffffff;
   margin-left: auto;
@@ -41,12 +85,18 @@
   padding-right: 5vw;
   padding-left: 5vw;
   padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-bottom: 6vh;
   margin-top:5vh;
+}
+.ImageList-Projects{
+  color: rgb(117, 72, 104);
+  width: 45vw;
+  height: 25vh;
+  background-color: #ffffff;
 }
 .App-footer{
   text-align: center;
-  background-color: #917e9b;
+  background-color: #9e7baf;
   bottom: 0;
   height: 10vh;
   position: absolute;
@@ -100,11 +150,6 @@ svg.fillframe {
   width: 100%;
   height: 100%;
 }
-
-.App-link {
-  color: #ffffff;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -126,6 +171,8 @@ svg.fillframe {
   .App-header{
     font-size: calc(2em + 2vmin);
     text-align: center;
+    background-color: #9e7baf;
+    background: #9e7baf;
   }
   .App-logo{
     align-items: center;
