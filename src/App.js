@@ -6,6 +6,7 @@ import Box from '@material-ui/core/Box';
 import { ImageList } from '@material-ui/core';
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ListSubheader from '@material-ui/core/ListSubheader';
+//import Slide from '@mui/material/Slide';
 //import PROJECTS from '../src/assets/projects.ts';
 
 function App() {
@@ -36,23 +37,10 @@ function App() {
         
           
         </Box>
-        {/*Thinking wether to add a Carousel or a ImageList */}
-        {/* <ImageList className="ImageList-projects">
-          <ImageListItem key="Subheader" cols={2}>
-            <ListSubheader component="div">Projects</ListSubheader>
-          </ImageListItem>
-        </ImageList> */}
+       {/*<Box className="Box-projects">
 
-          {/* {PROJECTS.map((item) => (
-            <ImageListItem key={item.img}>
-            <img
-              src={`${item.img}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-              alt={item.title}
-              loading="lazy"
-            />
-          } </ImageListItem>
-        </ImageList>    */}
+          Projects Here
+        </Box>*/}
       </main>
       <footer className='App-footer'>
         <a
