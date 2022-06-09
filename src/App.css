@@ -35,6 +35,10 @@
   margin: 0;
   text-align: center;
   padding: 3vh 3vw;
+  text-transform: none;
+  line-height: 1vh;
+  display:initial;
+  
 }
 .NavBar a:hover {
   background-color: white;
@@ -43,8 +47,6 @@
   border-radius: 10px;
   
 }
-
-
 .App-header {
   font-family: Caveat;
   background-color: #917e9b;
@@ -91,8 +93,7 @@
 
 }
 .Box-projects{
-  animation: slide-left 10s ease;
-  margin-left: 0%;
+  display:none;
 }
 @keyframes slide-left {
   from {

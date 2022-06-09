@@ -3,10 +3,10 @@ import React from 'react';
 import logo from '../src/assets/star.svg';
 import './App.css';
 import Box from '@material-ui/core/Box';
-import { ImageList } from '@material-ui/core';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ListSubheader from '@material-ui/core/ListSubheader';
-//import Slide from '@mui/material/Slide';
+import changeText from './components/Change/index.tsx';
+import Button from '@material-ui/core/Button';
+import cat from '../src/assets/images/catscratch.png';
+
 //import PROJECTS from '../src/assets/projects.ts';
 
 function App() {
@@ -14,9 +14,13 @@ function App() {
     <div className="App">
       <Box className="NavBar">
         <ul>
-          <a href="./">Home</a>
-          <a href="https://github.com/AlissonRoss?tab=repositories">Projects</a>
-          <a href="https://www.linkedin.com/in/alisson-ross/">LinkedIn</a>
+          <Button className="Nav-home" href="#main" onClick={() => changeText("Box-projects","Box-main") }>
+            Home</Button>
+          <Button className="Nav-projects" href="#Box-projects" onClick={() => changeText("Box-main","Box-projects") }>
+            Projects
+          </Button>
+          
+          <Button href="https://www.linkedin.com/in/alisson-ross/">LinkedIn</Button>
         </ul> 
       </Box>
       <header className="App-header">
@@ -29,18 +33,19 @@ function App() {
       <main className='App-main'>
         <Box className="Box-main">
           <div className="Hello-world">Hello World!<br/></div>
-          My name is Alisson Ross.<br/>
-            I am a Computer Science and Engineering major at Merced Community College.
-            I am also a Front-end web developer for HackMerced and a IT Assistant for SJDC.
-            I make website components using ReactJS, Typescript, and other front-end tools.<br/>
-            This site is under current re-construction.
-        
           
+          I am a Computer Science and Engineering major at Merced Community College.
+          I am also a Front-end web developer for HackMerced and a IT Assistant for SJDC.
+          I make website components using ReactJS, Typescript, and other front-end tools.<br/>
+          This site is under current re-construction.
+        
         </Box>
-       {/*<Box className="Box-projects">
 
-          Projects Here
-        </Box>*/}
+        <Box className="Box-projects">
+          <div className="Hello-world">Project section coming soon!</div>
+          <img src= {cat} width="500" height="100"></img>
+        </Box>
+       
       </main>
       <footer className='App-footer'>
         <a
