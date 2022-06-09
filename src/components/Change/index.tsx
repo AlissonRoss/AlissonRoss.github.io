@@ -6,8 +6,4 @@ export default function changeText(boxDescription: string, newDescription: strin
     oldText.style.cssText = "display:none";
     newText.style.cssText="display: grid";
 
-
-    
-    
-    
 }

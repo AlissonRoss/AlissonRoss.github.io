@@ -16,7 +16,7 @@ function App() {
         <ul>
           <Button className="Nav-home" href="#main" onClick={() => changeText("Box-projects","Box-main") }>
             Home</Button>
-          <Button className="Nav-projects" href="#Box-projects" onClick={() => changeText("Box-main","Box-projects") }>
+          <Button className="Nav-projects" href="#projects" onClick={() => changeText("Box-main","Box-projects") }>
             Projects
           </Button>
           
@@ -42,8 +42,9 @@ function App() {
         </Box>
 
         <Box className="Box-projects">
-          <div className="Hello-world">Project section coming soon!</div>
-          <img src= {cat} width="500" height="100"></img>
+          <div className="Hello-world">Projects! <br/></div>
+          Projects section coming soon!
+          <img className="Tux" src= {cat}/>
         </Box>
        
       </main>

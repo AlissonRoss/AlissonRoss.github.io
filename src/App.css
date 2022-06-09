@@ -95,6 +95,10 @@
 .Box-projects{
   display:none;
 }
+.Tux{
+  width:20vw;
+  height: 10vh;
+}
 @keyframes slide-left {
   from {
     margin-left: 100%;
@@ -207,6 +211,10 @@ svg.fillframe {
     align-items: center;
   }
   .App-footer{
-    position: static;
+    position: fixed;
+  }
+  .Tux{
+    width: 70vw;
+    height: 10vh;
   }
 }
