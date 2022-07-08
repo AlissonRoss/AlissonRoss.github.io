@@ -3,20 +3,19 @@ import React from 'react';
 import logo from '../src/assets/star.svg';
 import './App.css';
 import Box from '@material-ui/core/Box';
-import changeText from './components/Change/index.tsx';
 import Button from '@material-ui/core/Button';
-import cat from '../src/assets/images/catscratch.png';
-
-//import PROJECTS from '../src/assets/projects.ts';
+import ChangeText from './components/Change/index.tsx';
 
 function App() {
+let description = ChangeText("main");
   return (
     <div className="App">
       <Box className="NavBar">
         <ul>
-          <Button className="Nav-home" href="#main" onClick={() => changeText("Box-projects","Box-main") }>
+          <Button className="Nav-home" href="#main"  onClick={() => description= ChangeText("main")}>
             Home</Button>
-          <Button className="Nav-projects" href="#projects" onClick={() => changeText("Box-main","Box-projects") }>
+          <Button className="Nav-projects" href="#projects" onClick={() => description= ChangeText("projects")} >
+          
             Projects
           </Button>
           
@@ -27,24 +26,12 @@ function App() {
         
         <img src={logo} className="App-logo" alt="logo" />
         Alisson Ross
-        
       </header>
   
       <main className='App-main'>
         <Box className="Box-main">
           <div className="Hello-world">Hello World!<br/></div>
-          
-          I am a Computer Science and Engineering major at Merced Community College.
-          I am also a Front-end web developer for HackMerced and a IT Assistant for SJDC.
-          I make website components using ReactJS, Typescript, and other front-end tools.<br/>
-          This site is under current re-construction.
-        
-        </Box>
-
-        <Box className="Box-projects">
-          <div className="Hello-world">Projects! <br/></div>
-          Projects section coming soon!
-          <img className="Tux" src= {cat}/>
+          {description}
         </Box>
        
       </main>

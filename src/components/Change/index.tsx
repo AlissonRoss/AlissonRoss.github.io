@@ -1,9 +1,23 @@
+import React from 'react';
+import cat from 'C:/Users/Alisson/Documents/AlissonRoss.github.io/src/assets/images/catscratch.png';
 
 
-export default function changeText(boxDescription: string, newDescription: string){
-    var oldText:HTMLElement = document.getElementsByClassName(boxDescription)[0] as HTMLElement;
-    var newText:HTMLElement =document.getElementsByClassName(newDescription)[0] as HTMLElement;
-    oldText.style.cssText = "display:none";
-    newText.style.cssText="display: grid";
+function ChangeText(prop){
+    const orgState = <div>I am a Computer Science and Engineering major at Merced Community College.
+    I am also a Front-end web developer for HackMerced and a IT Assistant for SJDC.
+    I make website components using ReactJS, Typescript, and other front-end tools.
+    This site is under current re-construction.</div>
 
-}
+    const projState = <div>  Projects section coming soon!
+    <img className="Tux" alt='cat' src= {cat}/> </div>;
+
+    if(prop === "main"){
+        prop = orgState;
+    }
+    else if(prop === "projects"){
+        prop =  projState
+    }
+    return(
+        <div>{prop}</div>
+    );
+} export default ChangeText;

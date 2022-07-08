@@ -92,9 +92,6 @@
   text-align: right;
 
 }
-.Box-projects{
-  display:none;
-}
 .Tux{
   width:20vw;
   height: 10vh;
@@ -211,7 +208,8 @@ svg.fillframe {
     align-items: center;
   }
   .App-footer{
-    position: fixed;
+    position: sticky;
+    bottom:0;
   }
   .Tux{
     width: 70vw;
