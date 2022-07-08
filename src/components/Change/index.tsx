@@ -1,5 +1,5 @@
 import React from 'react';
-import cat from 'C:/Users/Alisson/Documents/AlissonRoss.github.io/src/assets/images/catscratch.png';
+// import cat from './assets/images/catscratch.png';
 
 
 function ChangeText(prop){
@@ -8,11 +8,11 @@ function ChangeText(prop){
     I make website components using ReactJS, Typescript, and other front-end tools.
     This site is under current re-construction.</div>
 
-    const projState = <div>  Projects section coming soon!
-    <img className="Tux" alt='cat' src= {cat}/> </div>;
+    const projState = <div>  Projects section coming soon! </div>
+    {/* <img className="Tux" alt='cat' src= {cat}/> </div>; */}
 
     if(prop === "main"){
-        prop = orgState;
+        prop = orgState
     }
     else if(prop === "projects"){
         prop =  projState
