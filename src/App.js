@@ -7,7 +7,8 @@ import Button from '@material-ui/core/Button';
 import ChangeText from './components/Change/index.tsx';
 
 function App() {
-let description = ChangeText("main");
+var description = ChangeText("main");
+console.log({description})
   return (
     <div className="App">
       <Box className="NavBar">
