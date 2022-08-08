@@ -47,6 +47,7 @@
   border-radius: 10px;
   
 }
+
 .App-header {
   font-family: Caveat;
   background-color: #917e9b;
@@ -68,6 +69,11 @@
   font-family: 'Press Start 2P', cursive;
   padding-bottom: 2vh;
   animation: slide-right 2s ease;
+}
+.projects-header{
+  font-family: 'Press Start 2P', cursive;
+  padding-bottom: 2vh;
+  animation: slide-left 2s ease;
 }
 .App-main{
   width: 45vw;
@@ -131,6 +137,10 @@
   bottom: 0;
   height: 10vh;
   width:100%;
+  text-decoration: none;
+}
+.App-link{
+  text-decoration: none;
 }
 .Starcomponent{
   position: absolute;

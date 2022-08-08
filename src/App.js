@@ -1,21 +1,22 @@
 import React from 'react';
 //import Starcomponent from '../src/components/Star/index.tsx';
-import logo from '../src/assets/star.svg';
+import logo from '../src/components/assets/star.svg';
 import './App.css';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import ChangeText from './components/Change/index.tsx';
+import { useState } from 'react';
 
 function App() {
-var description = ChangeText("main");
-console.log({description})
+  const [mainDescEnabled, setMainDescEnabled] = useState(true);
+  var description = ChangeText(mainDescEnabled)
   return (
     <div className="App">
       <Box className="NavBar">
         <ul>
-          <Button className="Nav-home" href="#main"  onClick={() => description= ChangeText("main")}>
+          <Button className="Nav-home" href="#main"  onClick={() => description = ChangeText(setMainDescEnabled(true))}>
             Home</Button>
-          <Button className="Nav-projects" href="#projects" onClick={() => description= ChangeText("projects")} >
+          <Button className="Nav-projects" href="#projects" onClick={() => description = ChangeText(setMainDescEnabled(false))} >
           
             Projects
           </Button>
@@ -31,7 +32,7 @@ console.log({description})
   
       <main className='App-main'>
         <Box className="Box-main">
-          <div className="Hello-world">Hello World!<br/></div>
+         
           {description}
         </Box>
        
@@ -41,7 +42,6 @@ console.log({description})
           className="App-link"
           href="https://github.com/AlissonRoss"
           target="_blank"
-          rel="noopener noreferrer"
         >
           <br/>Made with &#128151; at Alisson's Github
         </a>
