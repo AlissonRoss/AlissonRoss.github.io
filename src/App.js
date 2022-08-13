@@ -30,12 +30,8 @@ function App() {
         Alisson Ross
       </header>
   
-      <main className='App-main'>
-        <Box className="Box-main">
-         
+      <main >
           {description}
-        </Box>
-       
       </main>
       <footer className='App-footer'>
         <a

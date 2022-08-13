@@ -1,18 +1,20 @@
 import React from 'react';
-import cat from '../assets/images/catscratch.png';
+// import cat from '../assets/images/catscratch.png';
+import Card from '../Card/index.js';
+import { Box } from '@material-ui/core';
+import 'animate.css';
 function mainDesc(){
-    return  (<div> <div className="Hello-world">Hello World!<br/></div>
-        I am a Computer Science and Engineering major at Merced Community College.<br/> 
-        I am also a Front-end web developer for HackMerced and a IT Assistant for SJDC.<br/>
+    return  ( <Box className='App-main'> <div className="Hello-world">Hello World!<br/></div>
+        I am a Computer Science and Engineering major at Merced Community College.
+        I am also a Front-end web developer for HackMerced and a IT Assistant for SJDC.
         I make website components using ReactJS, Typescript, and other front-end tools.<br/>
         This site is under current re-construction.
-        </div>)
+        </Box>)
 }
 function projDesc(){
-    return (<div> <div className="projects-header">Projects!<br/></div>
-        Projects section coming soon! <br/>
-        <img className="Tux" src={cat}/>
-        </div>)
+    return (<Box className='Proj-main'> <div className="projects-header">Projects!<br/></div>
+        <Card></Card>
+        </Box>)
 }
 export default function ChangeText(prop) {
     if(prop){
