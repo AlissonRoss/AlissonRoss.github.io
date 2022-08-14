@@ -1,6 +1,7 @@
 import React from 'react';
 // import cat from '../assets/images/catscratch.png';
-import Card from '../Card/index.js';
+import CardCatScratch from '../CardCatscratch/index.js';
+import CardCatClicker from '../CardCatclicker/index.js';
 import { Box } from '@material-ui/core';
 import 'animate.css';
 function mainDesc(){
@@ -13,7 +14,11 @@ function mainDesc(){
 }
 function projDesc(){
     return (<Box className='Proj-main'> <div className="projects-header">Projects!<br/></div>
-        <Card></Card>
+        <div className='Card-style'>
+            <CardCatScratch/>
+            <CardCatClicker/>
+        </div>
+       
         </Box>)
 }
 export default function ChangeText(prop) {
