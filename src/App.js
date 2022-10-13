@@ -30,7 +30,7 @@ function App() {
         Alisson Ross
       </header>
   
-      <main >
+      <main className="Body">
           {description}
       </main>
       <footer className='App-footer'>

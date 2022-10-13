@@ -3,7 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .App {
+  color: white;
+  display:block;
+  background-color: #353035;
   min-height: 100vh;
+}
+.Body{
   color: white;
   display:block;
   background-color: #353035;
@@ -82,7 +87,10 @@
   text-align: center;
   display: initial;
   color:white;
-  animation: jello 2s;
+  animation: fadeInLeft 2s;
+}
+.Accordion{
+  margin-top: 5vh;
 }
 .App-main{
   width: 45vw;
@@ -99,8 +107,8 @@
   padding-right: 5vw;
   padding-left: 5vw;
   padding-top: 5vh;
-  padding-bottom: 6vh;
-  margin-bottom: 6vh;
+  padding-bottom: 5vh;
+  margin-bottom: calc(100vh - 46.5%);
   margin-top:5vh;
   text-align: right;
 }
@@ -120,10 +128,15 @@
   padding-right: 5vw;
   padding-left: 5vw;
   padding-top: 5vh;
-  padding-bottom: 6vh;
-  margin-bottom: 6vh;
+  padding-bottom: 5vh;
+  margin-bottom: calc(100vh - 43%);
   margin-top:5vh;
   text-align: center;
+}
+.Typo{
+  
+  color:rgb(187, 89, 159);
+  text-align:"center";
 }
 .Tux{
   width:20vw;
@@ -160,9 +173,10 @@
 .App-footer{
   text-align: center;
   background-color: rgba(182, 86, 169, 0.767);
-  position:static;
+  position: static;
+  padding-bottom: 2em;
+  overflow: hidden;
   bottom: 0;
-  height: 11vh;
   width:100%;
   text-decoration: none;
 }
@@ -227,13 +241,17 @@ svg.fillframe {
 }
 /*VIEWPORTS*/
 @media screen and (max-width: 915px){
+  .App-main{
+    margin-bottom: 5vh;
+  }
+  .Proj-main{
+    margin-bottom: 7vh;
+  }
   .App-main, .Proj-main{
-    height: 20%;
     width: auto;
     margin-left: 5%;
     margin-right: 5%;
-    text-align: left;
-    margin-bottom:5vh;
+    text-align: left; 
     font-size: calc(1em + 2vmin);
   }
   .Card-style{
@@ -247,10 +265,6 @@ svg.fillframe {
   }
   .App-logo{
     align-items: center;
-  }
-  .App-footer{
-    position: static;
-    bottom:0;
   }
   .Tux{
     width: 70vw;
