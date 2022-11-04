@@ -6,7 +6,7 @@
   color: white;
   display:block;
   background-color: #353035;
-  min-height: 100vh;
+  height: 100vh;
 }
 .Body{
   color: white;
@@ -22,7 +22,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vi;
   pointer-events: none;
   filter: drop-shadow(10px 10px 4px rgb(80, 54, 73));
 }
@@ -64,7 +64,7 @@
   font-family: Caveat;
   background-color: #917e9b;
   background: linear-gradient(45deg, #4b064a, #963b8a);
-  font-size: calc(6rem + 2vmin);
+  font-size: calc(6rem + 2vi);
   font-weight: bold;
   animation: gradient 15s ease infinite;
   animation-direction: alternate;
@@ -90,7 +90,7 @@
   animation: fadeInLeft 2s;
 }
 .Accordion{
-  margin-top: 5vh;
+  margin-top: 2vi;
 }
 .App-main{
   width: 45vw;
@@ -104,12 +104,12 @@
   background-color: #ffffff;
   margin-right: 5vw;
   margin-left: auto;
-  padding-right: 5vw;
-  padding-left: 5vw;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-right: 5dvw;
+  padding-left: 5dvw;
+  padding-top: 5dvh;
+  padding-bottom: 5dvh;
   margin-bottom: calc(100vh - 46.5%);
-  margin-top:5vh;
+  margin-top:5dvh;
   text-align: right;
 }
 .Proj-main{
@@ -173,7 +173,7 @@
 .App-footer{
   text-align: center;
   background-color: rgba(182, 86, 169, 0.767);
-  position: static;
+  position: fixed;
   padding-bottom: 2em;
   overflow: hidden;
   bottom: 0;
@@ -258,13 +258,13 @@ svg.fillframe {
     margin-bottom: auto;
   }
   .App-header{
-    font-size: calc(2em + 2vmin);
+    font-size: calc(2em + 2vi);
     text-align: center;
     background-color: #4b064a;
     background: #4b064a;
   }
   .App-logo{
-    align-items: center;
+    height: 10vi;
   }
   .Tux{
     width: 70vw;
