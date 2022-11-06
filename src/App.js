@@ -30,9 +30,9 @@ function App() {
         Alisson Ross
       </header>
   
-      <main className="Body">
+      <div className="Body">
           {description}
-      </main>
+      </div>
       <footer className='App-footer'>
         <a
           className="App-link"
@@ -43,6 +43,7 @@ function App() {
         </a>
       </footer>
     </div>
+    
     
   );
 }

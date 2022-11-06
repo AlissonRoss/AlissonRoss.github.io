@@ -1,16 +1,19 @@
 /*IMPORTS*/
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Red+Hat+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+/** FRONT PAGE **/
 .App {
   color: white;
-  display:block;
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  width: 100vw;
+  height:100vh;
   background-color: #353035;
-  height: 100vh;
 }
 .Body{
   color: white;
-  display:block;
+  padding-bottom: 2vh;
   background-color: #353035;
 }
 .Card-style{
@@ -22,7 +25,8 @@
 }
 
 .App-logo {
-  height: 20vi;
+  margin-top: 10vh;
+  height: 15vi;
   pointer-events: none;
   filter: drop-shadow(10px 10px 4px rgb(80, 54, 73));
 }
@@ -36,6 +40,7 @@
   top:0;
   float: right;
   padding-right: 3vw;
+  position: absolute;
 }
 .NavBar a{
   font-size: calc(1em + 1vmin);
@@ -64,7 +69,7 @@
   font-family: Caveat;
   background-color: #917e9b;
   background: linear-gradient(45deg, #4b064a, #963b8a);
-  font-size: calc(6rem + 2vi);
+  font-size: 8vi;
   font-weight: bold;
   animation: gradient 15s ease infinite;
   animation-direction: alternate;
@@ -76,21 +81,6 @@
   100% {
     background-position: 100%
   }
-}
-.Hello-world{
-  font-family: 'Press Start 2P', cursive;
-  padding-bottom: 2vh;
-  animation: fadeInRight 1s;
-}
-.projects-header{
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;
-  display: initial;
-  color:white;
-  animation: fadeInLeft 2s;
-}
-.Accordion{
-  margin-top: 2vi;
 }
 .App-main{
   width: 45vw;
@@ -104,18 +94,35 @@
   background-color: #ffffff;
   margin-right: 5vw;
   margin-left: auto;
-  padding-right: 5dvw;
-  padding-left: 5dvw;
-  padding-top: 5dvh;
-  padding-bottom: 5dvh;
-  margin-bottom: calc(100vh - 46.5%);
-  margin-top:5dvh;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  margin-bottom: 5vh;
+  margin-top:5vh;
   text-align: right;
 }
+.Hello-world{
+  font-family: 'Press Start 2P', cursive;
+  padding-bottom: 2vh;
+  animation: fadeInRight 1s;
+}
+/** PROJECTS SECTION **/
+.projects-header{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  display: initial;
+  color:white;
+  animation: fadeInLeft 2s;
+}
+.Accordion{
+  margin-top: 2vi;
+}
+
 .Proj-main{
   width: auto;
-  min-height: auto;
-  display: flexbox;
+  display: inline-block;
+  position:relative;
   font-family: 'Red Hat Text', sans-serif;
   border-radius: 10px;
   color: rgb(117, 72, 104);
@@ -129,7 +136,7 @@
   padding-left: 5vw;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  margin-bottom: calc(100vh - 43%);
+  margin-bottom: 5vh;
   margin-top:5vh;
   text-align: center;
 }
@@ -172,24 +179,27 @@
 }
 .App-footer{
   text-align: center;
-  background-color: rgba(182, 86, 169, 0.767);
-  position: fixed;
-  padding-bottom: 2em;
-  overflow: hidden;
-  bottom: 0;
-  width:100%;
+  background-color: rgb(182, 86, 169);
+  font-size: 1em;
+  height: calc(100% - 90vh);
+  bottom:0;
+  left: 0;
+  right:0;
+  flex: 0 0 5em;
+  margin-top:auto;
+  position: relative;
   text-decoration: none;
 }
 .App-link{
   text-decoration: none;
 }
-.Starcomponent{
+/* .Starcomponent{
   position: absolute;
   z-index: -2;
   transition: opacity 0.75s;
   
-}
-@keyframes fade {
+} */
+/* @keyframes fade {
   0% {
       opacity: 0;
   }
@@ -221,7 +231,7 @@
 
 .fade:nth-of-type(3) {
   animation-delay: -8s;
-}
+} */
 
 
 svg.fillframe {
@@ -241,23 +251,25 @@ svg.fillframe {
 }
 /*VIEWPORTS*/
 @media screen and (max-width: 915px){
-  .App-main{
-    margin-bottom: 5vh;
+  .Body{
+    display: block;
+    /* height:0; */
   }
   .Proj-main{
-    margin-bottom: 7vh;
+    max-height: calc(100vh - 5%);
   }
   .App-main, .Proj-main{
     width: auto;
     margin-left: 5%;
     margin-right: 5%;
     text-align: left; 
+    margin-bottom: 0;
+    /* margin-bottom: calc(100vh - 5%); */
     font-size: calc(1em + 2vmin);
   }
-  .Card-style{
-    margin-bottom: auto;
-  }
+  
   .App-header{
+    padding-top: 1em;
     font-size: calc(2em + 2vi);
     text-align: center;
     background-color: #4b064a;
@@ -269,5 +281,10 @@ svg.fillframe {
   .Tux{
     width: 70vw;
     height: 10vh;
+  }
+  .App-footer{
+    height: 5%;
+    overflow: scroll;
+    position: fixed;
   }
 }
