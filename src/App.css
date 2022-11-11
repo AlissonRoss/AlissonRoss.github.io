@@ -256,9 +256,6 @@ svg.fillframe {
     display: block;
     /* height:0; */
   }
-  .Proj-main{
-    max-height: calc(100vh - 5%);
-  }
   .App-main, .Proj-main{
     width: auto;
     margin-left: 5%;
