@@ -6,6 +6,7 @@ import { AccordionSummary, AccordionDetails, Box, Accordion, Typography, CardMed
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Button, Paper } from '@mui/material';
 import ReactImg from '../assets/images/react.png';
+import CatPetImg from '../assets/images/catpet.png'
 
 import 'animate.css';
 function mainDesc(){
@@ -21,11 +22,27 @@ function projDesc(){
             <Accordion className="Accordion">
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}>
+                        <Typography gutterBottom variant="h5" className="Typo">2022- 2023 Projects</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='Card-style'>
+                    <Paper variant="outlined">
+                        <img src={CatPetImg} alt="Cat" width="90%"></img>
+                        <Typography gutterBottom variant="h4" component="div" color="rgb(187, 89, 159);">
+                            CatPet
+                        </Typography>
+                        <Typography variant='caption' color="text.secondary"> ThreeJS testbed on top of ReactJS that I created to learn more about animation, 3D Modeling, anything ThreeJS! All cat models are made by me!</Typography>
+                    </Paper>
+                    <Button className="Typo" href="https://alisson.me/catpet">Link</Button>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}>
                         <Typography gutterBottom variant="h5" className="Typo">2022 Web Dev Guides</Typography>
                 </AccordionSummary>
                 <AccordionDetails className='Card-style'>
                     <Paper variant="outlined">
-                        <img src={ReactImg} width="90%"></img>
+                        <img src={ReactImg} alt="ReactJS" width="90%"></img>
                         <br/> <Typography variant='caption' color="text.secondary">The following are links to the Web Dev Guides I have written for workshops</Typography>
                     </Paper>
                     <Button className="Typo" href="https://www.notion.so/Intro-to-ReactJS-Guide-Fall-2022-5978106126f94dfd8ea0597c47177816">2022 Intro to ReactJS Guide</Button>
