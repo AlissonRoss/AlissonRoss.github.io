@@ -38,7 +38,7 @@ function projDesc(){
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}>
-                        <Typography gutterBottom variant="h5" className="Typo">2022 Web Dev Guides</Typography>
+                        <Typography gutterBottom variant="h5" className="Typo">2022-2023 Web Dev Guides</Typography>
                 </AccordionSummary>
                 <AccordionDetails className='Card-style'>
                     <Paper variant="outlined">
@@ -47,6 +47,7 @@ function projDesc(){
                     </Paper>
                     <Button className="Typo" href="https://www.notion.so/Intro-to-ReactJS-Guide-Fall-2022-5978106126f94dfd8ea0597c47177816">2022 Intro to ReactJS Guide</Button>
                     <Button className="Typo" href="https://www.notion.so/CalBridge-Basic-Git-GitHub-Guide-Fall-2022-086521b3c9064624be04b2cfe39d5a2f">2022 Git & GitHub Basics</Button>
+                    <Button className='Typo' href="https://toothsome-sheep-35d.notion.site/ReactJS-App-Deployment-to-GH-Pages-2023-3e5d202250c34128a404b28b597ab273">2023 ReactJS App Deployment guide to GH Pages</Button>
                 </AccordionDetails>
             </Accordion>
             <Accordion>
