@@ -27,7 +27,7 @@ function App() {
       <header className="App-header">
         
         <img src={logo} className="App-logo" alt="logo" />
-        Bob Ross
+        Alisson Ross
       </header>
   
       <div className="Body">
