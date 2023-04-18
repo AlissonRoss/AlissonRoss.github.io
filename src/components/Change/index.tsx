@@ -2,7 +2,7 @@ import React from 'react';
 // import cat from '../assets/images/catscratch.png';
 import CardCatScratch from '../CardCatscratch/index.js';
 import CardCatClicker from '../CardCatclicker/index.js';
-import { AccordionSummary, AccordionDetails, Box, Accordion, Typography, CardMedia, CardActions } from '@material-ui/core';
+import { AccordionSummary, AccordionDetails, Box, Accordion, Typography, CardMedia, CardActions, CardContent } from '@material-ui/core';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Button, Paper } from '@mui/material';
 import ReactImg from '../assets/images/react.png';
@@ -27,10 +27,12 @@ function projDesc(){
                 <AccordionDetails className='Card-style'>
                     <Paper variant="outlined">
                         <img src={CatPetImg} alt="Cat" width="90%"></img>
+                        <CardContent>
                         <Typography gutterBottom variant="h4" component="div" color="rgb(187, 89, 159);">
                             CatPet
                         </Typography>
                         <Typography variant='caption' color="text.secondary"> ThreeJS testbed on top of ReactJS that I created to learn more about animation, 3D Modeling, anything ThreeJS! All cat models are made by me!</Typography>
+                        </CardContent>
                         <CardActions>
                             <Button size="small" style={{color:"rgb(187, 89, 159)",marginLeft:"2rem"}} href="https://alisson.me/catpet">DEMO</Button>
                             <Button size="small" style={{color:"rgb(187, 89, 159)"}} href="https://github.com/AlissonRoss/catpet">Github</Button>
@@ -39,12 +41,14 @@ function projDesc(){
                     <p/>
                     <Paper variant="outlined">
                         <img src={HackMViii} alt="HackMerced page 2023" width="90%"></img>
+                        <CardContent>
                         <Typography gutterBottom variant="h4" component="div" color="rgb(187, 89, 159);">
                             HackMerced VIII Event Page
                         </Typography>
                         <Typography variant='caption' color="text.secondary"> Event page for the MLH HackMerced VIII Hackathon for central valley students to view information about the 2023 event. 
                             I worked on the Tracks component, the Footer component, Mobile responsiveness, among other fixes. I delegated tasks to my team as the HackMerced Engineering Director 2023.                        
                         </Typography>
+                        </CardContent>
                         <CardActions>
                             <Button size="small" style={{color:"rgb(187, 89, 159)"}} href="https://github.com/HackMerced/HackMerced-VIII">Github</Button>
                         </CardActions>
