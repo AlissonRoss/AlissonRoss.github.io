@@ -39,7 +39,7 @@ const itemData = [
         description: 'ThreeJS testbed on top of ReactJS that I created to learn more about animation, 3D Modeling, anything ThreeJS! All cat models are made by me!'
     },
     {
-        projectLink: 'none',
+        projectLink: 'https://github.com/HackMerced/HackMerced-VIII',
         projectName: 'HackMerced VIII Event Page',
         img:require('../assets/images/hackviii.png'),
         imgAlt: 'HackMerced Tower',
