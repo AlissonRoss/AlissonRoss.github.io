@@ -46,5 +46,14 @@ const itemData = [
         githubLink: 'https://github.com/HackMerced/HackMerced-VIII',
         description:'Event page for the MLH HackMerced VIII Hackathon for central valley students to view information about the 2023 event. I worked on the Tracks component, the Footer component, Mobile responsiveness, among other fixes. I delegated tasks to my team as the HackMerced Engineering Director 2023'
 
+    },
+    {
+        projectLink:'https://catpet-login.vercel.app',
+        projectName: 'CatPet Login UI Module 2 Project',
+        img:require('../assets/images/login-ui.png'),
+        imgAlt: 'CatPet Login UI',
+        githubLink:'https://github.com/AlissonRoss/login-ui-ross',
+        description:'Login Page Project for Bay Valley Techs Code Academy Module 2 certification. Summer 2023.'
+
     }
 ];
