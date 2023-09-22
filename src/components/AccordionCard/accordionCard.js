@@ -49,11 +49,19 @@ const itemData = [
     },
     {
         projectLink:'https://catpet-login.vercel.app',
-        projectName: 'CatPet Login UI Module 2 Project',
+        projectName: 'CatPet Login UI Module 1 Project',
         img:require('../assets/images/login-ui.png'),
         imgAlt: 'CatPet Login UI',
         githubLink:'https://github.com/AlissonRoss/login-ui-ross',
-        description:'Login Page Project for Bay Valley Techs Code Academy Module 2 certification. Summer 2023.'
+        description:'Login Page Project for Bay Valley Techs Code Academy Module 1 certification. Summer 2023.'
 
+    },
+    {
+        projectLink:'https://tamagoatchi.vercel.app/',
+        projectName: 'Tamagoatchi Game Module 2 Final Project',
+        img:require('../assets/images/tamagoatchi.png'),
+        imgAlt: 'Tamagoatchi',
+        githubLink:'https://github.com/AlissonRoss/Tamagoatchi',
+        description:'Pet game Project for Bay Valley Techs Code Academy Module 2 certification. Fall 2023.'
     }
 ];
