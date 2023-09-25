@@ -103,7 +103,7 @@
   margin-top:5vh;
   text-align: right;
 }
-.Hello-world{
+.Hello-world, .Cert-header{
   font-family: 'Press Start 2P', cursive;
   padding-bottom: 2vh;
   animation: fadeInRight 1s;
@@ -120,7 +120,7 @@
   margin-top: 2vi;
 }
 
-.Proj-main{
+.Proj-main, .Cert-main{
   width: auto;
   display: inline-block;
   position:relative;
@@ -150,6 +150,26 @@
 .Tux{
   width:20vw;
   height: 10vh;
+}
+
+/*CERTIFICATONS SECTION*/
+.Cert-Description{
+  display: grid;
+  width: auto;
+  color: #ffffff;
+  font-family:"Red Hat Text, sans-serif";
+  font-size: calc(.5em + 1.3vmin);
+  font-weight: lighter;
+  text-align: center;
+  justify-items: center;
+}
+.Cert-header{
+  color: #ffffff;
+}
+.Cert-items{
+    width: fit-content;
+    height: auto;
+    column-count: 2;
 }
 @keyframes slide-left {
   from {
@@ -257,7 +277,10 @@ svg.fillframe {
     display: block;
     /* height:0; */
   }
-  .App-main, .Proj-main{
+  .NavBar{
+    font-size: 0.65em;
+  }
+  .App-main, .Proj-main, .Cert-main{
     width: auto;
     margin-left: 5%;
     margin-right: 5%;
@@ -265,6 +288,9 @@ svg.fillframe {
     margin-bottom: 0;
     /* margin-bottom: calc(100vh - 5%); */
     font-size: calc(1em + 2vmin);
+  }
+  .Cert-Description{
+    width: auto;
   }
   
   .App-header{
@@ -283,6 +309,10 @@ svg.fillframe {
     height: 9%;
     overflow: scroll;
   }
+  .MuiImageList-root{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+ 
 }
 /*CHROME */
 @supports (-webkit-appearance: none) {
