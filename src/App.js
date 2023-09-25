@@ -8,17 +8,20 @@ import ChangeText from './components/Change/index.tsx';
 import { useState } from 'react';
 
 function App() {
-  const [mainDescEnabled, setMainDescEnabled] = useState(true);
-  var description = ChangeText(mainDescEnabled)
+  const [desc, setDesc] = useState('mainDesc');
+  var description = ChangeText(desc)
   return (
     <div className="App">
       <Box className="NavBar">
         <ul>
-          <Button className="Nav-home" href="#main"  onClick={() => description = ChangeText(setMainDescEnabled(true))}>
-            Home</Button>
-          <Button className="Nav-projects" href="#projects" onClick={() => description = ChangeText(setMainDescEnabled(false))} >
-          
+          <Button className="Nav-home" href="#main"  onClick={() => setDesc('mainDesc')}>
+            Home
+          </Button>
+          <Button className="Nav-projects" href="#projects" onClick={() => setDesc('projDesc')} >
             Projects
+          </Button>
+          <Button className="Nav-projects" href="#certs" onClick={() => setDesc('certsDesc')} >
+            Certifications
           </Button>
           
           <Button href="https://www.linkedin.com/in/alisson-ross/">LinkedIn</Button>
