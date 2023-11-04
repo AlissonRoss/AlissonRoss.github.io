@@ -46,6 +46,7 @@ function projDesc(){
                     <Button className='Typo' href="https://toothsome-sheep-35d.notion.site/ReactJS-App-Deployment-to-GH-Pages-2023-3e5d202250c34128a404b28b597ab273">2023 ReactJS App Deployment guide to GH Pages</Button>
                     <Button className='Typo' href="https://toothsome-sheep-35d.notion.site/Intro-to-ReactJS-Hooks-Spring-2023-17112b1f79344d2491113ba9eca4b3e2">2023 ReactJS Intro to Hooks</Button>
                     <Button className='Typo' href="https://toothsome-sheep-35d.notion.site/Basic-HTML-CSS-rules-1b0e51051c7d44d4a1066f891183b8b4">2023 HTML/CSS Basics</Button>
+                    <Button className='Typo' href="https://toothsome-sheep-35d.notion.site/ThreeJS-Basics-9d61028bb1e14e168d5e1105774f6b03?pvs=4">2023 ThreeJS Workshop</Button>
                 </AccordionDetails>
             </Accordion>
             <Accordion>
@@ -97,6 +98,16 @@ const itemData = [
     {
         img: require('../assets/images/cert2.png'),
         title: 'Introduction to Responsive CSS Module',
+        date: '2023',
+    },
+    {
+        img: require('../assets/images/cert3.png'),
+        title: 'Basic Content Management Systems Module',
+        date: '2023',
+    },
+    {
+        img: require('../assets/images/cert4.png'),
+        title: 'Introduction to Javascript Module',
         date: '2023',
     },
 ]
