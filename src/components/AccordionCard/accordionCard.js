@@ -4,13 +4,14 @@ export default function AccordionCard() {
     return (
         
             <AccordionDetails className='Card-style'>
-            {itemData.map((item) => (
-                <Paper variant="outlined">
+            {itemData.map((item, i) => (
+                <Paper variant="outlined" key={i}>
                 <a href={item.projectLink}><CardMedia
                     component="img"
                     image={item.img}
                     height="50%"
                     alt={item.imgAlt}
+                    
                 /></a>
                 <CardContent>
                 <Typography gutterBottom variant="h4" component="div" color="rgb(187, 89, 159);">
@@ -29,6 +30,7 @@ export default function AccordionCard() {
          </AccordionDetails>
     );
 }
+
 const itemData = [
     {
         projectLink: 'https://alisson.me/catpet',
