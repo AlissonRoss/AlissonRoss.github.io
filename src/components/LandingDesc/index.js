@@ -1,8 +1,10 @@
-import { Box } from '@material-ui/core';
+import { Box } from '@material-ui/core'
+import 'animate.css'
 export default function mainDesc(){
     return  (<Box className='App-main'> <div className="Hello-world">Hello World!<br/></div>
         I am an incoming CSU Stanislaus Computer Science student for Spring 2024.
-        I am also a Front-end web developer for HackMerced, a New Technologist Alumna from Microsoft M365 Team and Cyborg Mobile Cohort 8 2022, and a IT Assistant for SJDC.
+        I oversee the web development team as the Front-end web development Director for HackMerced 2023. I am a New Technologist Alumna from Microsoft M365 Team & Cyborg Mobile Cohort 8 2022, and 
+        a web development student in BVT's Cohort-236 2023.
         I make website components using ReactJS, Typescript, and other front-end tools.<br/>
         </Box>)
 }

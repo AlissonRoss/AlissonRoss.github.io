@@ -4,6 +4,7 @@ import { AccordionSummary, AccordionDetails, Box, Accordion, Typography} from '@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Paper } from '@mui/material';
 import ReactImg from '../assets/images/react.png';
+import 'animate.css';
 
 export default function projDesc(){
     return (
@@ -91,7 +92,7 @@ const items1819 = [
         projectName: 'Catclicker',
         img:require('../assets/images/catclicker.png'),
         imgAlt:'Cat',
-        githubLink: 'https://github.com/AlissonRoss/catpet',
+        githubLink: 'https://github.com/AlissonRoss/catclicker',
         description: 'Kittens fall from the sky on-click! A simple clicker game.'
     },
 ]
