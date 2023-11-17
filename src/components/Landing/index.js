@@ -2,11 +2,9 @@ import React from 'react';
 import logo from '../assets/star.svg';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
-import { useNavigate } from 'react-router-dom';
 import { Outlet, Link } from 'react-router-dom';
 
 export default function Landing() {
-    const navigate = useNavigate();
 
   return (
     <div className="App">
