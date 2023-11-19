@@ -208,6 +208,10 @@ svg.fillframe {
 }
 /*VIEWPORTS*/
 @media screen and (max-width: 915px){
+  .App{
+    overflow-x: visible; 
+    overflow-y: scroll;
+  }
   .Body{
     display: block;
     /* height:0; */
@@ -221,13 +225,17 @@ svg.fillframe {
     margin-right: 5%;
     text-align: left; 
     margin-bottom: 0;
-    font-size: calc(1em + 2vmin);
-    
+     
+  }
+  .App-main{
+    font-size: large;
   }
   .Proj-main{
     display:flex;
     flex-direction: column;
+    padding: 5%;
   }
+  
   .Cert-Description > ul{
     display: flex !important;
     flex-direction: column;

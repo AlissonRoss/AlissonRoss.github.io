@@ -17,7 +17,7 @@ export default function projDesc(){
                 </AccordionSummary>
                 {AccordionCard(items2223)}
             </Accordion>
-            <Accordion>
+            <Accordion className="Accordion">
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}>
                         <Typography gutterBottom variant="h5" className="Typo">2022-2023 Web Dev Guides</Typography>
@@ -30,14 +30,12 @@ export default function projDesc(){
                     {GuideCard(guides2223)}  
                 </AccordionDetails>
             </Accordion>
-            <Accordion>
+            <Accordion className="Accordion">
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}>
                     <Typography gutterBottom variant="h5" className="Typo">2018-2019 Projects</Typography>
                 </AccordionSummary>
-                <AccordionDetails className='Card-style'>
-                        {AccordionCard(items1819)}
-                </AccordionDetails>
+                {AccordionCard(items1819)}
             </Accordion>      
         </Box>)
 }
