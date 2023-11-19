@@ -5,12 +5,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Paper } from '@mui/material';
 import ReactImg from '../assets/images/react.png';
 import 'animate.css';
+import { Container } from '@mui/system';
 
 export default function projDesc(){
     return (
     <Box className='Proj-main'> 
         <div className="projects-header">Projects and Guides<br/></div>
-            <Accordion className="Accordion">
+        <Box className='proj-Accordion' sx={{boxShadow:6, borderRadius:'25px'}} >
+            <Accordion className="Accordion" sx={{borderTopLeftRadius: '25px!important', borderTopRightRadius: '25px!important'}}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}>
                         <Typography gutterBottom variant="h5" className="Typo">2022- 2023 Projects</Typography>
@@ -30,13 +32,14 @@ export default function projDesc(){
                     {GuideCard(guides2223)}  
                 </AccordionDetails>
             </Accordion>
-            <Accordion className="Accordion">
+            <Accordion className="Accordion" sx={{borderBottomLeftRadius: '25px!important', borderBottomRightRadius: '25px!important'}}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}>
                     <Typography gutterBottom variant="h5" className="Typo">2018-2019 Projects</Typography>
                 </AccordionSummary>
                 {AccordionCard(items1819)}
-            </Accordion>      
+            </Accordion>    
+        </Box>  
         </Box>)
 }
 

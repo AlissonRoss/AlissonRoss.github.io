@@ -2,6 +2,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { Box } from '@material-ui/core';
+import { Paper } from '@mui/material';
 
 export default function certDesc(){
     return(
@@ -11,13 +12,16 @@ export default function certDesc(){
             <h2 className="Cert-Description">The following are some of the certifications I've earned so far:
             <ImageList className= 'Cert-items' cols={2} sx={{justify:"center"}} >
                 {itemData.map((item) => (
-                <ImageListItem key={item.img} >
-                <img className='Cert-image'
-                    src={`${item.img}?w=248&fit=crop&auto=format`}
-                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                    alt={item.title}
-                    loading="lazy"
-                />
+                <ImageListItem className="Cert-item" key={item.img} >
+                    
+                    <img className='Cert-image'
+                        src={`${item.img}?w=248&fit=crop&auto=format`}
+                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                        loading="lazy"
+                    />
+                
+            
                 <ImageListItemBar
                     title={item.title}
                     subtitle={<span>{item.date}</span>}

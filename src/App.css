@@ -116,11 +116,12 @@
   display: initial;
   color:white;
   animation: fadeInLeft 2s;
+  padding-bottom: 2vi;
 }
-.Accordion{
+.proj-Accordion{
+  
   margin-top: 2vi;
 }
-
 .Proj-main, .Cert-main{
   width: auto;
   display: inline-block;
@@ -164,7 +165,16 @@
     width: fit-content;
     height: auto;
     column-count: 2;
+    gap: 25px !important;
 }
+.Cert-item{
+  align-self: center;
+}
+.Cert-image{
+  border-radius: 25px;
+  filter: drop-shadow(0 1rem 0.5rem rgb(59, 23, 49));
+}
+
 .ImageList-Projects{
   color: rgb(117, 72, 104);
   width: 45vw;
@@ -235,13 +245,20 @@ svg.fillframe {
     flex-direction: column;
     padding: 5%;
   }
-  
+
   .Cert-Description > ul{
     display: flex !important;
     flex-direction: column;
+    
+  }
+  .Cert-image{
+    width: 60vw !important;
+  }
+  .MuiImageListItemBar-title{
+    font-size: calc(0.4em + 2vi) !important;
   }
   .Cert-items{
-    width: 95%;
+    width: 100%;
   }
   
   .App-header{
