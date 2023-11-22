@@ -9,8 +9,8 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Routes>
+    <BrowserRouter>
+      <Routes basename={process.env.PUBLIC_URL}>
         <Route path="/" element={<Landing />}>
           <Route
             path="/"
