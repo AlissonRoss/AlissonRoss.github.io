@@ -13,6 +13,7 @@
 }
 .Body{
   color: white;
+  display: flex;
   padding-bottom: 2vh;
   background-color: #0a0919;
 }
@@ -103,6 +104,18 @@
   margin-bottom: 5vh;
   margin-top:5vh;
   text-align: right;
+}
+.Photo-card{
+
+  height: auto;
+  display: flex;
+  align-self: center;
+  background-color: transparent !important;
+  margin-left: auto;
+}
+.Photo-card-media{
+  width: 20vw !important;
+  border-radius: 80px;
 }
 .Hello-world, .Cert-header{
   font-family: 'Press Start 2P', cursive;
@@ -224,7 +237,6 @@ svg.fillframe {
   }
   .Body{
     display: block;
-    /* height:0; */
   }
   .NavBar{
     font-size: 0.65em;
@@ -239,6 +251,16 @@ svg.fillframe {
   }
   .App-main{
     font-size: large;
+  }
+  .Photo-card{
+    position: relative;
+    width: min-content !important;
+    border-radius: 50% 50% 50% 5% !important;
+    top: 5rem;
+    width: 5rem;
+  }
+  .Photo-card-media{
+    border-radius: 50% 50% 50% 5%;
   }
   .Proj-main{
     display:flex;
