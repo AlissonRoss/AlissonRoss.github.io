@@ -246,17 +246,16 @@ svg.fillframe {
     margin-left: 5%;
     margin-right: 5%;
     text-align: left; 
-    margin-bottom: 0;
-     
   }
   .App-main{
     font-size: large;
+    margin-top: 0;
   }
   .Photo-card{
     position: relative;
     width: min-content !important;
     border-radius: 50% 50% 50% 5% !important;
-    top: 5rem;
+    top: 4rem;
     width: 5rem;
   }
   .Photo-card-media{
