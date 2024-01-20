@@ -13,11 +13,12 @@ function App() {
     <Router history={createHashHistory({
       basename: "",
       hashType: "slash",
+      getUserConfirmation: (message, callback) => callback(window.confirm(message)),
     })}>
-      <Routes basename={process.env.PUBLIC_URL}>
+      <Routes>
         <Route element={<Landing />}>
           <Route
-            path="/"
+            exact path="/"
             element={<MainDesc />}
           />
           <Route
