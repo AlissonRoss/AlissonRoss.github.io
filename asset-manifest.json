@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.3539e045.css",
-    "main.js": "/static/js/main.62cea049.js",
+    "main.js": "/static/js/main.7241f94b.js",
     "static/js/787.dcf70554.chunk.js": "/static/js/787.dcf70554.chunk.js",
+    "static/media/hmix.png": "/static/media/hmix.8cc7fdcc523ed89ef087.png",
     "static/media/cert4.png": "/static/media/cert4.805164e5ef1bd6a6d6c5.png",
     "static/media/cert3.png": "/static/media/cert3.dd3f59b5945bf5c8361d.png",
     "static/media/me.jpg": "/static/media/me.9357730c76bf66c492e4.jpg",
@@ -11,6 +12,8 @@
     "static/media/tamagoatchi.png": "/static/media/tamagoatchi.68ecfac25560d6460eb5.png",
     "static/media/cert2.png": "/static/media/cert2.aa57436c61d707b2fa58.png",
     "static/media/catscratch.png": "/static/media/catscratch.c5645b2f910d9b8ffb45.png",
+    "static/media/cert5.png": "/static/media/cert5.b9851e7ba327f4beb8df.png",
+    "static/media/cert6.png": "/static/media/cert6.cb8aef49dc1fa67e0216.png",
     "static/media/login-ui.png": "/static/media/login-ui.fb012214970577b9900c.png",
     "static/media/catpet.png": "/static/media/catpet.d763c0ff648d4315cac9.png",
     "static/media/cert1.png": "/static/media/cert1.fd8621e996e9a38130ad.png",
@@ -18,11 +21,11 @@
     "index.html": "/index.html",
     "static/media/star.svg": "/static/media/star.388d7b67159083398d0029fb9038cd45.svg",
     "main.3539e045.css.map": "/static/css/main.3539e045.css.map",
-    "main.62cea049.js.map": "/static/js/main.62cea049.js.map",
+    "main.7241f94b.js.map": "/static/js/main.7241f94b.js.map",
     "787.dcf70554.chunk.js.map": "/static/js/787.dcf70554.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3539e045.css",
-    "static/js/main.62cea049.js"
+    "static/js/main.7241f94b.js"
   ]
 }
