@@ -5,7 +5,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Paper } from '@mui/material';
 import ReactImg from '../assets/images/react.png';
 import 'animate.css';
-import { Container } from '@mui/system';
 
 export default function projDesc(){
     return (
@@ -13,6 +12,13 @@ export default function projDesc(){
         <div className="projects-header">Projects and Guides<br/></div>
         <Box className='proj-Accordion' sx={{boxShadow:6, borderRadius:'25px'}} >
             <Accordion className="Accordion" sx={{borderTopLeftRadius: '25px!important', borderTopRightRadius: '25px!important'}}>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}>
+                        <Typography gutterBottom variant="h5" className="Typo">2024 Projects</Typography>
+                </AccordionSummary>
+                {AccordionCard(items2324)}
+            </Accordion>
+            <Accordion className="Accordion">
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}>
                         <Typography gutterBottom variant="h5" className="Typo">2022- 2023 Projects</Typography>
@@ -42,7 +48,16 @@ export default function projDesc(){
         </Box>  
         </Box>)
 }
-
+const items2324 =[
+    {
+        projectLink:'https://hackmerced.com/',
+        projectName:'HackMerced IX Event Page',
+        img:require('../assets/images/hmix.png'),
+        imgAlt:"HackMerced IX",
+        githubLink: 'https://github.com/HackMerced/HackMerced-IX',
+        description: 'I led the development of the HackMerced IX Event Page 2024 as the Front-end Engineering Director. This website is a comprehensive resource for hackathon participants.'
+    }
+];
 const items2223 = [
     {
         projectLink: 'https://alisson.me/catpet',

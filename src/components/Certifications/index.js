@@ -56,4 +56,14 @@ const itemData = [
         title: 'Introduction to Javascript Module',
         date: '2023',
     },
+    {
+        img: require('../assets/images/cert5.png'),
+        title: 'Introduction to React Framework Module',
+        date: '2024'
+    },
+    {
+        img: require('../assets/images/cert6.png'),
+        title: 'Front End Web-App Development Course',
+        date: '2024'
+    }
 ]
