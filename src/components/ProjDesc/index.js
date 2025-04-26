@@ -11,7 +11,20 @@ export default function projDesc(){
     <Box className='Proj-main'> 
         <div className="projects-header">Projects and Guides<br/></div>
         <Box className='proj-Accordion' sx={{boxShadow:6, borderRadius:'25px'}} >
-            <Accordion className="Accordion" sx={{borderTopLeftRadius: '25px!important', borderTopRightRadius: '25px!important'}}>
+        <Accordion className="Accordion" sx={{borderTopLeftRadius: '25px!important', borderTopRightRadius: '25px!important'}}>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}>
+                        <Typography gutterBottom variant="h5" className="Typo">2025-2026 Web Dev Guides</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='Card-style'>
+                    <Paper variant="outlined">
+                        <img src={ReactImg} alt="ReactJS" width="90%"/>
+                        <br/> <Typography variant='caption' color="text.secondary">The following are links to the Web Dev Guides I have written for workshops</Typography>
+                    </Paper>
+                    {GuideCard(guides2526)}  
+                </AccordionDetails>
+            </Accordion>
+            <Accordion className="Accordion" >
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}>
                         <Typography gutterBottom variant="h5" className="Typo">2024 Projects</Typography>
@@ -48,6 +61,13 @@ export default function projDesc(){
         </Box>  
         </Box>)
 }
+const guides2526 =[
+    {
+        guideLink: 'https://toothsome-sheep-35d.notion.site/Introduction-to-NextJS-2025-1e0a0080f49a80daa29bddefdbafd853?pvs=4',
+        guideName: '2025 Intro to NextJS',
+    
+    },
+]
 const items2324 =[
     {
         projectLink:'https://hackmerced.com/',
